@@ -1,15 +1,29 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { Hero } from './components/Hero.jsx'
-import { About } from './components/About.jsx'
-import { Skills } from './components/Skills.jsx'
-import { Experience } from './components/Experience.jsx'
-import { Projects } from './components/Projects.jsx'
-import { Achievements } from './components/Achievements.jsx'
-import { Footer } from './components/Footer.jsx'
+import { CosmicBackground } from './components/effects/CosmicBackground.jsx'
+import { Navigation } from './components/sections/Navigation.jsx'
+import { ScrollProgress } from './components/sections/ScrollProgress.jsx'
+import { Hero } from './components/sections/Hero.jsx'
+import { About } from './components/sections/About.jsx'
+import { Skills } from './components/sections/Skills.jsx'
+import { Experience } from './components/sections/Experience.jsx'
+import { Projects } from './components/sections/Projects.jsx'
+import { Achievements } from './components/sections/Achievements.jsx'
+import { Contact } from './components/sections/Contact.jsx'
+import { Footer } from './components/sections/Footer.jsx'
 
 export default function App() {
   return (
-    <div className="min-h-dvh bg-ink-950 text-white">
+    <div className="min-h-screen bg-cosmic-void text-white">
+      {/* Cosmic Background */}
+      <CosmicBackground />
+
+      {/* Scroll Progress */}
+      <ScrollProgress />
+
+      {/* Navigation */}
+      <Navigation />
+
+      {/* Main Content */}
       <AnimatePresence mode="wait">
         <motion.main
           key="page"
@@ -21,12 +35,15 @@ export default function App() {
           <Hero />
 
           <div className="relative">
-            <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-indigo-500/5 to-transparent" />
+            {/* Gradient overlay */}
+            <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-neon-violet/5 to-transparent" />
+
             <About />
             <Skills />
             <Experience />
             <Projects />
             <Achievements />
+            <Contact />
           </div>
 
           <Footer />
@@ -35,4 +52,3 @@ export default function App() {
     </div>
   )
 }
-
