@@ -25,16 +25,16 @@ export function About() {
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-white">Education</h3>
                 <p className="mt-1 text-sm text-white/60">
-                  B.Tech in Computer Science & Engineering
+                  B.Tech in Information Technology and Mathematical Innovations
                 </p>
                 <p className="text-sm text-neon-cyan">
-                  Maharaja Agrasen Institute of Technology
+                  Cluster Innovation Centre, University of Delhi
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="rounded-full bg-neon-violet/20 px-3 py-1 text-xs font-medium text-neon-violet">
-                    CGPA: 8.5/10
+                    CGPA: 9.64/10
                   </span>
-                  <span className="text-xs text-white/40">2022 – 2026</span>
+                  <span className="text-xs text-white/40">2022 - 2026</span>
                 </div>
               </div>
             </div>
