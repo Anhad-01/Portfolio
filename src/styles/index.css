@@ -61,7 +61,30 @@ html {
   outline-offset: 2px;
 }
 
-/* Reduced motion */
+/* Star twinkle animation */
+@keyframes star-twinkle {
+  0%, 100% { opacity: inherit; transform: scale(1); }
+  50% { opacity: inherit; transform: scale(1.15); }
+}
+
+.star-animate {
+  animation: star-twinkle 3s ease-in-out infinite;
+}
+
+/* Page load blur reduction */
+@media (max-width: 768px) {
+  .page-content {
+    filter: blur(2px) !important;
+  }
+}
+.page-content.initial,
+.page-content.exit {
+  filter: blur(10px) !important;
+}
+.page-content {
+  filter: blur(0px) !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -69,5 +92,12 @@ html {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  main[style*="blur"] {
+    filter: none !important;
+  }
+  .star-animate {
+    animation: none !important;
+    opacity: var(--star-base, 0.5) !important;
   }
 }

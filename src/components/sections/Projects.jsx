@@ -15,19 +15,31 @@ export function Projects() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: '-100px' }}
-        className="grid gap-6 md:grid-cols-2"
+        className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]"
       >
         {PROJECTS.map((project, index) => (
-          <motion.div key={`${project.title}-${index}`} variants={fadeUp}>
-            <BorderBeam color={index % 3 === 0 ? 'violet' : index % 3 === 1 ? 'cyan' : 'magenta'}>
+          <motion.div
+            key={`${project.title}-${index}`}
+            variants={fadeUp}
+            className={`group relative overflow-hidden rounded-xl ${
+              index === 0
+                ? 'md:col-span-2 md:row-span-2'
+                : index === 1
+                ? 'md:col-span-2'
+                : 'md:col-span-1'
+            }`}
+          >
+            <BorderBeam
+              color={index % 3 === 0 ? 'violet' : index % 3 === 1 ? 'cyan' : 'magenta'}
+              className="h-full w-full"
+            >
               <Card
                 glowColor={index % 3 === 0 ? 'violet' : index % 3 === 1 ? 'cyan' : 'magenta'}
-                className="p-6 h-full flex flex-col"
+                className="h-full p-5 flex flex-col transition-transform duration-300 group-hover:scale-[1.02]"
               >
-                {/* Type badge */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mb-3">
                   <span
-                    className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${
+                    className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium ${
                       project.type === 'Publication'
                         ? 'bg-neon-magenta/20 text-neon-magenta'
                         : 'bg-neon-violet/20 text-neon-violet'
@@ -42,16 +54,16 @@ export function Projects() {
                   </span>
                 </div>
 
-                {/* Title & Description */}
-                <h3 className="mt-4 text-lg font-semibold text-white leading-tight">
+                <h3 className="text-lg font-semibold text-white leading-tight line-clamp-2">
                   {project.title}
                 </h3>
-                <p className="mt-2 text-sm text-white/60 flex-1">{project.desc}</p>
+                <p className="mt-2 text-sm text-white/60 flex-1 line-clamp-3">
+                  {project.desc}
+                </p>
 
-                {/* Highlights */}
                 {project.highlights && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.highlights.map((highlight, i) => (
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {project.highlights.slice(0, 3).map((highlight, i) => (
                       <span
                         key={i}
                         className="rounded-full bg-white/5 px-2 py-0.5 text-xs text-white/50"
@@ -62,9 +74,8 @@ export function Projects() {
                   </div>
                 )}
 
-                {/* Tags */}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {project.tags.slice(0, 2).map((tag) => (
                     <span
                       key={tag}
                       className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-white/40"
@@ -74,13 +85,12 @@ export function Projects() {
                   ))}
                 </div>
 
-                {/* Link */}
                 <motion.a
                   href={project.link.href}
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{ x: 4 }}
-                  className="mt-4 inline-flex items-center gap-1.5 text-sm text-neon-cyan hover:text-neon-violet transition-colors"
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm text-neon-cyan hover:text-neon-violet transition-colors"
                 >
                   {project.link.label}
                   <ExternalLink className="h-3.5 w-3.5" />

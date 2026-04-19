@@ -139,3 +139,36 @@ export const ACHIEVEMENTS = [
   },
 ]
 
+export const BLOGPOSTS = [
+  {
+    title: 'My Journey with AI/ML: From Basics to Building',
+    excerpt: 'Reflecting on how I got started with machine learning and the projects that shaped my understanding.',
+    date: '2026-01-15',
+    link: {
+      label: 'Read more',
+      href: '#',
+    },
+    tags: ['AI/ML', 'Journey'],
+  },
+  {
+    title: 'Building Scalable Web Applications',
+    excerpt: 'Lessons learned from building production-ready web apps with React and modern tooling.',
+    date: '2025-12-20',
+    link: {
+      label: 'Read more',
+      href: '#',
+    },
+    tags: ['Web Dev', 'React'],
+  },
+  {
+    title: 'Lessons from Hackathons',
+    excerpt: 'What I learned from participating in multiple hackathons and how to make the most of them.',
+    date: '2025-11-10',
+    link: {
+      label: 'Read more',
+      href: '#',
+    },
+    tags: ['Hackathons', 'Career'],
+  },
+]
+
