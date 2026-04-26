@@ -21,7 +21,7 @@ export function Hero() {
       <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }}>
         <Particles
           particleColors={["#ffffff"]}
-          particleCount={200}
+          particleCount={150}
           particleSpread={10}
           speed={0.1}
           particleBaseSize={100}
