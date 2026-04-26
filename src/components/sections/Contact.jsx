@@ -6,6 +6,7 @@ import { Card } from '../ui/Card.jsx'
 import { BackgroundBeams } from '../effects/BackgroundBeams.jsx'
 import { LINKS } from '../../data/content.js'
 import { fadeUp } from '../../lib/motion.js'
+import PixelBlast from '../effects/PixelBlast.jsx'
 
 const contactLinks = [
   {
@@ -32,6 +33,27 @@ export function Contact() {
   return (
     <Section id="contact" eyebrow="Contact" title="Let's Connect">
       <div className="relative">
+        {/* PixelBlast background */}
+        <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }}>
+          <PixelBlast
+            variant="square"
+            pixelSize={4}
+            color="#ffffff"
+            patternScale={2}
+            patternDensity={0.2}
+            pixelSizeJitter={0}
+            enableRipples={true}
+            rippleSpeed={0.4}
+            rippleThickness={0.12}
+            rippleIntensityScale={1.5}
+            liquid={false}
+            speed={0.5}
+            edgeFade={0.25}
+            transparent={true}
+            autoPauseOffscreen={false}
+          />
+        </div>
+
         {/* Background Beams */}
         <BackgroundBeams className="opacity-20" />
 
