@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { GraduationCap, Award, BookOpen } from 'lucide-react'
 import { Container } from '../ui/Container.jsx'
 import { Section } from '../ui/Section.jsx'
-import { Card } from '../ui/Card.jsx'
+import { SpotlightCard } from '../ui/SpotlightCard.jsx'
 import { fadeUp, stagger } from '../../lib/motion.js'
 
 export function About() {
@@ -17,7 +17,7 @@ export function About() {
       >
         {/* Education Card */}
         <motion.div variants={fadeUp}>
-          <Card glowColor="violet" className="p-6 h-full">
+          <SpotlightCard glowColor="violet" className="p-6 h-full">
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-neon-violet/20 p-3">
                 <GraduationCap className="h-6 w-6 text-neon-violet" />
@@ -38,12 +38,12 @@ export function About() {
                 </div>
               </div>
             </div>
-          </Card>
+          </SpotlightCard>
         </motion.div>
 
         {/* Quick Facts Card */}
         <motion.div variants={fadeUp}>
-          <Card glowColor="cyan" className="p-6 h-full">
+          <SpotlightCard glowColor="cyan" className="p-6 h-full">
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-neon-cyan/20 p-3">
                 <Award className="h-6 w-6 text-neon-cyan" />
@@ -66,12 +66,12 @@ export function About() {
                 </ul>
               </div>
             </div>
-          </Card>
+          </SpotlightCard>
         </motion.div>
 
         {/* Focus Areas */}
         <motion.div variants={fadeUp} className="md:col-span-2">
-          <Card glowColor="magenta" className="p-6">
+          <SpotlightCard glowColor="magenta" className="p-6">
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-neon-magenta/20 p-3">
                 <BookOpen className="h-6 w-6 text-neon-magenta" />
@@ -96,7 +96,7 @@ export function About() {
                 </div>
               </div>
             </div>
-          </Card>
+          </SpotlightCard>
         </motion.div>
       </motion.div>
     </Section>

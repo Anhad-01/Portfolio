@@ -11,6 +11,7 @@ import { Blog } from './components/sections/Blog.jsx'
 import { Contact } from './components/sections/Contact.jsx'
 import { Footer } from './components/sections/Footer.jsx'
 
+
 export default function App() {
   return (
     <div className="min-h-screen bg-cosmic-void text-white">

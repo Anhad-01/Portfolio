@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Trophy, ExternalLink } from 'lucide-react'
 import { Container } from '../ui/Container.jsx'
 import { Section } from '../ui/Section.jsx'
-import { Card } from '../ui/Card.jsx'
+import { StarBorder } from '../ui/StarBorder.jsx'
 import { ACHIEVEMENTS } from '../../data/content.js'
 import { fadeUp, stagger } from '../../lib/motion.js'
 
@@ -18,11 +18,12 @@ export function Achievements() {
       >
         {ACHIEVEMENTS.map((achievement, index) => (
           <motion.div key={`${achievement.title}-${index}`} variants={fadeUp}>
-            <Card
-              glowColor={index % 2 === 0 ? 'violet' : 'cyan'}
-              className="p-6 h-full"
+            <StarBorder
+              as="div"
+              color={index % 2 === 0 ? '#8b5cf6' : '#06b6d4'}
+              className="h-full w-full"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 text-left h-full">
                 <div
                   className={`rounded-lg ${
                     index % 2 === 0 ? 'bg-neon-violet/20' : 'bg-neon-cyan/20'
@@ -34,7 +35,7 @@ export function Achievements() {
                     }`}
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 flex flex-col items-start h-full">
                   <div className="flex items-center gap-2">
                     <span className="text-xs text-white/50">{achievement.time}</span>
                   </div>
@@ -55,7 +56,7 @@ export function Achievements() {
                   </motion.a>
                 </div>
               </div>
-            </Card>
+            </StarBorder>
           </motion.div>
         ))}
       </motion.div>

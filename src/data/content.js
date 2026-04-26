@@ -143,6 +143,7 @@ export const BLOGPOSTS = [
   {
     title: 'My Journey with AI/ML: From Basics to Building',
     excerpt: 'Reflecting on how I got started with machine learning and the projects that shaped my understanding.',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n\nCurabitur pretium tincidunt lacus. Ut nulla elementum interdum. Maecenas quis hendrerit velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
     date: '2026-01-15',
     link: {
       label: 'Read more',
@@ -153,6 +154,7 @@ export const BLOGPOSTS = [
   {
     title: 'Building Scalable Web Applications',
     excerpt: 'Lessons learned from building production-ready web apps with React and modern tooling.',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \n\nIn hac habitasse platea dictumst. Mauris et diam eget libero sodales lobortis. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore verutit lamOREM ipsum.',
     date: '2025-12-20',
     link: {
       label: 'Read more',
@@ -163,6 +165,7 @@ export const BLOGPOSTS = [
   {
     title: 'Lessons from Hackathons',
     excerpt: 'What I learned from participating in multiple hackathons and how to make the most of them.',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut provident eius officiat.',
     date: '2025-11-10',
     link: {
       label: 'Read more',

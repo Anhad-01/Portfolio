@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { cn } from '../../lib/cn'
 
-export function StarsBackground({ count = 120, className }) {
+export function StarsBackground({ count = 40, className }) {
   const stars = useMemo(
     () =>
       [...Array(count)].map((_, i) => ({

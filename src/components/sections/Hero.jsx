@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, MapPin, Download } from 'lucide-react'
 import { Container } from '../ui/Container.jsx'
-import { Spotlight } from '../ui/Spotlight.jsx'
 import { TypewriterEffect } from '../effects/TypewriterEffect.jsx'
 import { FloatingTechIcons } from '../effects/FloatingTechIcons.jsx'
-import { ScrollIndicator } from '../effects/ScrollIndicator.jsx'
 import { LINKS } from '../../data/content.js'
 import { fadeUp, stagger } from '../../lib/motion.js'
+import PixelBlast from '../effects/PixelBlast.jsx'
 
 const TYPED_WORDS = [
   'AI Engineer',
@@ -18,8 +17,27 @@ const TYPED_WORDS = [
 export function Hero() {
   return (
     <header className="relative min-h-screen overflow-hidden">
-      <Spotlight className="absolute inset-0">
-        <Container className="relative py-20 sm:py-32">
+        {/* PixelBlast background */}
+        <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }}>
+          <PixelBlast
+            variant="square"
+            pixelSize={4}
+            color="#B497CF"
+            patternScale={2}
+            patternDensity={1.5}
+            pixelSizeJitter={0}
+            enableRipples={true}
+            rippleSpeed={0.4}
+            rippleThickness={0.12}
+            rippleIntensityScale={1.5}
+            liquid={false}
+            speed={0.5}
+            edgeFade={0.25}
+            transparent={true}
+            autoPauseOffscreen={false}
+          />
+        </div>
+        <Container className="relative z-10 py-20 sm:py-32">
           <motion.div
             variants={stagger(0.12, 0.06)}
             initial="hidden"
@@ -119,10 +137,6 @@ export function Hero() {
             </motion.div>
           </motion.div>
         </Container>
-      </Spotlight>
-
-      {/* Scroll indicator */}
-      <ScrollIndicator />
     </header>
   )
 }

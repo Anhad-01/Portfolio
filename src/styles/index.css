@@ -4,18 +4,18 @@
 :root {
   color-scheme: dark;
 
-  /* Cosmic Theme Variables */
-  --cosmic-void: #030014;
-  --cosmic-abyss: #0a0520;
-  --cosmic-nebula: #0f0728;
-  --cosmic-storm: #150a30;
+  /* Dark Theme Variables */
+  --cosmic-void: #000000;
+  --cosmic-abyss: #0a0a0a;
+  --cosmic-nebula: #1a1a1a;
+  --cosmic-storm: #262626;
 
-  --neon-violet: #8b5cf6;
-  --neon-cyan: #06b6d4;
-  --neon-magenta: #d946ef;
+  --neon-violet: #ffffff;
+  --neon-cyan: #a1a1aa;
+  --neon-magenta: #71717a;
 
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
 
 html,
@@ -29,7 +29,7 @@ body {
 }
 
 ::selection {
-  background: rgba(139, 92, 246, 0.35);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* Smooth scrolling */
@@ -47,12 +47,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 0.5);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Focus styles */

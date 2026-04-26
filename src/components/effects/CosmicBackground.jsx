@@ -5,7 +5,7 @@ import { GridPattern } from './GridPattern'
 
 export function CosmicBackground({ className }) {
   return (
-    <div className={cn('fixed inset-0 -z-10 overflow-hidden bg-cosmic-void', className)}>
+    <div className={cn('fixed inset-0 -z-10 overflow-hidden', className)}>
       {/* Base gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.12),transparent_50%)]" />
 
