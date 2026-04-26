@@ -126,9 +126,18 @@ export const PROJECTS = [
 
 export const ACHIEVEMENTS = [
   {
+    title: 'Design of an Optimal Planning Framework for Cryosurgical Treatment of Brain Tumor using CNN Segmentation of MRI Images',
+    time: '2026',
+    desc: 'Co-authored research integrating deep learning-based tumor segmentation with optimization algorithms (K-Medoids, GMM, BPA) for cryosurgical planning. Published in Cryobiology (Elsevier).',
+    link: {
+      label: 'DOI: 10.1016/j.cryobiol.2026.105619',
+      href: 'https://doi.org/10.1016/j.cryobiol.2026.105619',
+    },
+  },
+  {
     title: 'TATA Technologies InnoVent Hackathon',
     time: 'Aug 2025',
-    desc: 'Ranked top 31 out of 2,800+ teams for an AI-driven EV battery analytics platform.',
+    desc: 'Developed an AI-driven battery analytics solution for health monitoring, performance prediction and lifecycle management in EVs .Ranked top 31 out of 2,800+ teams.',
     link: {
       label: 'Battery Analytics Platform (GitHub)',
       href: 'https://github.com/Anhad-01/Digital-Twin-for-Battery-Ageing-Prediction',
@@ -137,7 +146,7 @@ export const ACHIEVEMENTS = [
   {
     title: 'Hack The Future Hackathon, MoSPI',
     time: 'Mar 2025',
-    desc: 'Ranked top 20 out of 1000+ teams for a multilingual semantic search app.',
+    desc: 'Built a multilingual semantic search app for classifying industries by NIC codes. Integrated voice-to-text, synonym mapping, and intelligent keyword retrieval. Ranked top 20 out of 1000+ teams.',
     link: {
       label: 'NIC Code Semantic Search (GitHub)',
       href: 'https://github.com/Anhad-01/semantic-search-nic.git',

@@ -64,24 +64,27 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="relative z-10"
         >
-          <Card glowColor="violet" className="max-w-xl mx-auto p-8 text-center">
+          <Card glowColor="violet" className="max-w-xl mx-auto p-8 text-center relative">
+            {/* Solid background to block PixelBlast behind the card */}
+            <div className="absolute inset-0 bg-cosmic-abyss/95 rounded-xl" />
+
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, type: 'spring' }}
-              className="inline-flex rounded-full bg-neon-violet/20 p-4 mb-6"
+              className="inline-flex rounded-full bg-neon-violet/20 p-4 mb-6 relative"
             >
               <Mail className="h-8 w-8 text-neon-violet" />
             </motion.div>
 
-            <h3 className="text-2xl font-semibold text-white">Get in Touch</h3>
-            <p className="mt-4 text-white/60">
+            <h3 className="text-2xl font-semibold text-white relative">Get in Touch</h3>
+            <p className="mt-4 text-white/60 relative">
               I'm always open to discussing AI projects, research collaborations,
               or opportunities in AI engineering.
             </p>
 
-            <div className="mt-8 flex flex-col gap-4">
+            <div className="mt-8 flex flex-col gap-4 relative">
               {contactLinks.map((link, index) => (
                 <motion.a
                   key={link.label}
@@ -94,7 +97,7 @@ export function Contact() {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   whileHover={{ scale: 1.02, x: 4 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`flex items-center gap-4 rounded-lg bg-white/5 px-6 py-4 text-left transition-all hover:bg-white/10 ${
+                  className={`flex items-center gap-4 rounded-lg bg-white/5 px-6 py-4 text-left transition-all hover:bg-white/10 relative ${
                     link.color === 'violet'
                       ? 'hover:ring-neon-violet/50'
                       : link.color === 'cyan'

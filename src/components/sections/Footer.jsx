@@ -14,9 +14,13 @@ export function Footer() {
             viewport={{ once: true }}
             className="text-sm text-white/40"
           >
-            © {new Date().getFullYear()} Anhad Mehrotra. Built with{' '}
+            {/* © {new Date().getFullYear()} Anhad Mehrotra. Built with{' '}
             <Heart className="inline h-3.5 w-3.5 text-neon-magenta" /> and React.
+          </motion.p> */}
+
+            © {new Date().getFullYear()} Anhad Mehrotra
           </motion.p>
+
 
           {/* Social Links */}
           <motion.div
