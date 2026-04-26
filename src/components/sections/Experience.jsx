@@ -33,7 +33,11 @@ export function Experience() {
                       <span className="text-sm text-neon-cyan">{exp.time}</span>
                     </div>
                     <h3 className="mt-2 text-xl font-semibold text-white">{exp.role}</h3>
-                    <p className="text-white/60">{exp.org}</p>
+                    {exp.website ? (
+                      <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-neon-cyan transition-colors">{exp.org}</a>
+                    ) : (
+                      <p className="text-white/60">{exp.org}</p>
+                    )}
                   </div>
                 </div>
 

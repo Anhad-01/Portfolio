@@ -43,7 +43,7 @@ export function Hero() {
               <MapPin className="h-3.5 w-3.5 text-neon-cyan" />
               <span>New Delhi, India</span>
               <span className="mx-1 h-1 w-1 rounded-full bg-white/30" />
-              <span className="text-neon-violet">Available for opportunities</span>
+              {/* <span className="text-neon-violet">Available for opportunities</span> */}
             </div>
           </motion.div>
 

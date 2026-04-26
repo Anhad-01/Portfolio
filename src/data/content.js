@@ -44,28 +44,34 @@ export const EXPERIENCE = [
   {
     role: 'AI Engineer Intern',
     org: 'Edxso',
+    website: 'https://www.edxso.com/',
     time: 'Feb – Apr 2026',
     bullets: [
-      'Developed an AI-powered educational assessment platform with RBAC.',
-      'Built a generative AI pipeline for automated creation of product marketing visuals.',
+      'Developed an AI-powered educational assessment platform with RBAC to evaluate question papers against the National Curriculum Framework.',
+      'Built and deployed a generative AI application for automated creation of product marketing visuals, supporting single and batch processing workflows.',
+      'Contributed to the development of a scalable question bank system that evaluates user-submitted questions against defined competencies',
     ],
   },
   {
     role: 'AI/ML Intern',
     org: 'National e-Governance Division, Ministry of Electronics & IT',
+    website: 'https://negd.gov.in/',
     time: 'Jun – Aug 2025',
     bullets: [
-      'Built an Agentic AI powered course recommender.',
-      'Researched AI security threats and governance.',
+      'Built an Agentic AI powered course recommender using hybrid filtering and semantic search.',
+      'Developed multilingual semantic search and feature enhancements for the myscheme portal and mobile app.',
+      'Researched AI security threats, governance frameworks, and operational measures like API security and red teaming.',
     ],
   },
   {
     role: 'Web Developer Intern',
     org: 'Craving For Gaming',
+    website: 'https://cravingforgaming.in/',
     time: 'Sep 2024 – Feb 2025',
     bullets: [
-      'Optimized website performance and improved UX.',
-      'Reduced page load time and improved keyword rankings.',
+      'Optimized website performance and improved UX using HTML/CSS & on-page SEO techniques',
+      'Reduced page load time, improved keyword ranking across 5+ product segments.',
+      'Supported product listing revamp that improved user engagement by 18%.',
     ],
   },
 ]

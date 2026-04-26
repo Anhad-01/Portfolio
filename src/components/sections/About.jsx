@@ -83,7 +83,7 @@ export function About() {
                   impactful solutions through cutting-edge technology.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {['Deep Learning', 'Computer Vision', 'NLP/LLMs', 'Agentic AI', 'Full-Stack Development'].map(
+                  {['Deep Learning', 'NLP', 'Computer Vision', 'Agentic AI', 'LLMs', 'Full-Stack Development'].map(
                     (area) => (
                       <span
                         key={area}
