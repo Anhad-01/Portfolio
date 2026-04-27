@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "1fe6adc148584001",
+    "type": "split",
+    "children": [
+      {
+        "id": "f881a8b9c393f07b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b2746d24d2ff8081",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "public/blogs/vibecoder.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vibecoder"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e9c290483e934cb3",
+    "type": "split",
+    "children": [
+      {
+        "id": "179d20c238ed7422",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2ce5b48462d0ce59",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cb6da554c3f2e4fd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "81471ad02df1db06",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a9d9571d53966c62",
+    "type": "split",
+    "children": [
+      {
+        "id": "d54a0f1bebc2f2b6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c4afb6cbd1d11d9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "public/blogs/vibecoder.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for vibecoder"
+            }
+          },
+          {
+            "id": "a71c10e58b673a25",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "public/blogs/vibecoder.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from vibecoder"
+            }
+          },
+          {
+            "id": "d72fb512945e68b9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "441f862ea2a3d5b7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "54831af7f4c1ad62",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "public/blogs/vibecoder.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of vibecoder"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b2746d24d2ff8081",
+  "lastOpenFiles": [
+    "public/images/blogs/vibecode.png",
+    "public/images/blogs/Unconfirmed 602891.crdownload",
+    "public/blogs/live_projects.md",
+    "public/images/blogs/college.png",
+    "public/images/blogs/Unconfirmed 257725.crdownload",
+    "public/images/blogs/hackathon.png",
+    "public/images/blogs/Unconfirmed 744724.crdownload",
+    "public/images/blogs",
+    "public/blogs/hackathon.md",
+    "public/blogs/vibecoder.md"
+  ]
+}

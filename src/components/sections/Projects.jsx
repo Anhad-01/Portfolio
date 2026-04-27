@@ -1,12 +1,20 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, FileText, Code2 } from 'lucide-react'
-import { Container } from '../ui/Container.jsx'
 import { Section } from '../ui/Section.jsx'
-import { BentoGrid, BentoCard } from '../ui/BentoGrid.jsx'
+import MagicBento from '../ui/MagicBento.jsx'
 import { PROJECTS } from '../../data/content.js'
-import { fadeUp, stagger } from '../../lib/motion.js'
+import { stagger } from '../../lib/motion.js'
 
 export function Projects() {
+  // Transform PROJECTS data into the format MagicBento expects
+  const bentoCards = PROJECTS.map((project) => ({
+    color: '#120F17',
+    title: project.title,
+    description: project.desc,
+    image: project.image || '',
+    href: project.link.href,
+    highlights: project.highlights,
+  }))
+
   return (
     <Section id="projects" eyebrow="Projects" title="Featured Work">
       <motion.div
@@ -15,37 +23,20 @@ export function Projects() {
         whileInView="show"
         viewport={{ once: true, margin: '-100px' }}
       >
-        <BentoGrid className="lg:grid-rows-3">
-          {PROJECTS.map((project, index) => (
-            <BentoCard
-              key={project.title}
-              name={project.title}
-              className={
-                index === 0 || index === 3
-                  ? "lg:col-span-2 lg:row-span-2"
-                  : "lg:col-span-1 lg:row-span-1"
-              }
-              background={
-                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-white/[0.01] pointer-events-none" />
-              }
-              Icon={project.type === 'Publication' ? FileText : Code2}
-              description={project.desc}
-              href={project.link.href}
-              cta={project.link.label}
-            >
-              <div className="absolute bottom-16 left-6 right-6 flex flex-wrap gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10 pointer-events-none">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-md bg-white/10 px-2 py-0.5 text-xs text-white backdrop-blur-md"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </BentoCard>
-          ))}
-        </BentoGrid>
+        <MagicBento
+          cards={bentoCards}
+          textAutoHide={true}
+          enableStars={false}
+          enableSpotlight
+          enableBorderGlow={true}
+          enableTilt={false}
+          enableMagnetism={false}
+          clickEffect
+          spotlightRadius={400}
+          particleCount={0}
+          glowColor="132, 0, 255"
+          disableAnimations={false}
+        />
       </motion.div>
     </Section>
   )
