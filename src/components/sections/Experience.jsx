@@ -8,7 +8,7 @@ import { fadeUp, stagger } from '../../lib/motion.js'
 
 export function Experience() {
   return (
-    <Section id="experience" eyebrow="Experience" title="Work History">
+    <Section id="experience" title="Work History">
       <motion.div
         variants={stagger(0.15)}
         initial="hidden"

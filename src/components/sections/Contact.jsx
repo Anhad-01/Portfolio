@@ -31,7 +31,7 @@ const contactLinks = [
 
 export function Contact() {
   return (
-    <Section id="contact" eyebrow="Contact" title="Let's Connect">
+    <Section id="contact" title="Let's Connect">
       <div className="relative">
         {/* PixelBlast background */}
         <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }}>
@@ -64,7 +64,7 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="relative z-10"
         >
-          <Card glowColor="violet" className="max-w-xl mx-auto p-8 text-center relative">
+          <Card glowColor="violet" className="max-w-xl mx-auto p-8 text-center relative" static>
             {/* Solid background to block PixelBlast behind the card */}
             <div className="absolute inset-0 bg-cosmic-abyss/95 rounded-xl" />
 
@@ -95,15 +95,7 @@ export function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  whileHover={{ scale: 1.02, x: 4 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`flex items-center gap-4 rounded-lg bg-white/5 px-6 py-4 text-left transition-all hover:bg-white/10 relative ${
-                    link.color === 'violet'
-                      ? 'hover:ring-neon-violet/50'
-                      : link.color === 'cyan'
-                      ? 'hover:ring-neon-cyan/50'
-                      : 'hover:ring-neon-magenta/50'
-                  } hover:ring-1`}
+                  className="flex items-center gap-4 rounded-lg bg-white/5 px-6 py-4 text-left relative"
                 >
                   <link.icon
                     className={`h-5 w-5 ${

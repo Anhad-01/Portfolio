@@ -2,13 +2,13 @@ import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '../../lib/cn'
 
-export function Card({ children, className }) {
+export function Card({ children, className, static: isStatic = false }) {
   const ref = useRef(null)
   const [rotateX, setRotateX] = useState(0)
   const [rotateY, setRotateY] = useState(0)
 
   const handleMouseMove = (e) => {
-    if (!ref.current) return
+    if (!ref.current || isStatic) return
     const rect = ref.current.getBoundingClientRect()
     const centerX = rect.left + rect.width / 2
     const centerY = rect.top + rect.height / 2
@@ -28,7 +28,7 @@ export function Card({ children, className }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
-        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+        transform: isStatic ? undefined : `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
         transformStyle: 'preserve-3d',
       }}
       className={cn(

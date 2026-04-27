@@ -16,7 +16,7 @@ export function Projects() {
   }))
 
   return (
-    <Section id="projects" eyebrow="Projects" title="Featured Work">
+    <Section id="projects" title="Featured Projects">
       <motion.div
         variants={stagger(0.15)}
         initial="hidden"

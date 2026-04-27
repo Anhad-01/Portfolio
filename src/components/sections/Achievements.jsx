@@ -25,7 +25,7 @@ export function Achievements() {
   const next = () => setCurrent((current + 1) % ACHIEVEMENTS.length)
 
   return (
-    <Section id="achievements" eyebrow="Achievements" title="Recognition & Awards">
+    <Section id="achievements" title="Recognition & Awards">
       <div
         className="relative"
         onMouseEnter={() => setIsPaused(true)}

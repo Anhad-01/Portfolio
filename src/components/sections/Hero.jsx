@@ -84,7 +84,7 @@ export function Hero() {
               download
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-neon-violet to-neon-cyan px-6 py-3 text-sm font-medium text-white shadow-glow-violet transition-shadow hover:shadow-glow-cyan"
+              className="inline-flex items-center gap-2 rounded-lg bg-white/5 px-6 py-3 text-sm font-medium text-white ring-1 ring-white/10 backdrop-blur-xl transition-all hover:bg-white/10 hover:ring-neon-violet/50"
             >
               <Download className="h-4 w-4" />
               Download Resume

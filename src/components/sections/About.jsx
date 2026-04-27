@@ -7,7 +7,7 @@ import { fadeUp, stagger } from '../../lib/motion.js'
 
 export function About() {
   return (
-    <Section id="about" eyebrow="About" title="Education & Background">
+    <Section id="about" title="Education & Background">
       <motion.div
         variants={stagger(0.1)}
         initial="hidden"

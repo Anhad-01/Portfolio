@@ -9,7 +9,7 @@ export function Skills() {
   const durations = [30, 45, 60]
 
   return (
-    <Section id="skills" eyebrow="Skills" title="Technical Expertise">
+    <Section id="skills" title="Technical Expertise">
       <motion.div
         variants={fadeUp}
         initial="hidden"
