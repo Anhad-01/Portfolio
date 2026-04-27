@@ -185,35 +185,37 @@ export const BLOGPOSTS = [
   {
     title: 'From Vibe Coder to Developer: How to Actually Use Coding Agents',
     excerpt: 'Because "just vibe with it" stops working the moment your app hits production.',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n\nCurabitur pretium tincidunt lacus. Ut nulla elementum interdum. Maecenas quis hendrerit velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
     date: '2026-04-28',
+    slug: 'from-vibecoder-to-developer',
+    image: '/images/blogs/vibecode.png',
     link: {
       label: 'Read more',
-      href: '#',
+      href: '/blogs/from-vibecoder-to-developer',
     },
     tags: [],
   },
   {
     title: "What College Teaches You and What It Doesn't: The Gap Between College and Live Projects",
     excerpt: 'And how to start closing that gap before your first job',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \n\nIn hac habitasse platea dictumst. Mauris et diam eget libero sodales lobortis. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore verutit lamOREM ipsum.',
     date: '2026-04-02',
+    slug: 'what-college-teaches-you',
+    image: '/images/blogs/college.png',
     link: {
       label: 'Read more',
-      href: '#',
+      href: '/blogs/what-college-teaches-you',
     },
     tags: [],
   },
   {
     title: 'From Clueless to Podium: A Practical Hackathon Survival Guide',
     excerpt: 'What I learned from participating in multiple hackathons and how to make the most of them.',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut provident eius officiat.',
     date: '2026-03-13',
+    slug: 'from-clueless-to-podium',
+    image: '/images/blogs/hackathon.png',
     link: {
       label: 'Read more',
-      href: '#',
+      href: '/blogs/from-clueless-to-podium',
     },
     tags: [],
   },
 ]
-
