@@ -88,8 +88,8 @@ export default function LogoLoop({
         style={{ height: logoHeight }}
       />
     ) : logo.node ? (
-      <div style={{ height: logoHeight }} className="flex items-center justify-center">
-        <div style={{ fontSize: logoHeight * 0.7 }}>{logo.node}</div>
+      <div style={{ height: logoHeight, width: logoHeight }} className="flex items-center justify-center">
+        {logo.node}
       </div>
     ) : (
       <div
