@@ -1,40 +1,15 @@
 import { motion } from 'framer-motion'
-import { Mail, Linkedin, Github, ExternalLink } from 'lucide-react'
-import { Container } from '../ui/Container.jsx'
+import { Mail } from 'lucide-react'
 import { Section } from '../ui/Section.jsx'
-import { Card } from '../ui/Card.jsx'
-import { BackgroundBeams } from '../effects/BackgroundBeams.jsx'
 import { LINKS } from '../../data/content.js'
-import { fadeUp } from '../../lib/motion.js'
 import PixelBlast from '../effects/PixelBlast.jsx'
-
-const contactLinks = [
-  {
-    icon: Mail,
-    label: 'Email',
-    href: LINKS.email,
-    color: 'violet',
-  },
-  {
-    icon: Linkedin,
-    label: 'LinkedIn',
-    href: LINKS.linkedin,
-    color: 'cyan',
-  },
-  {
-    icon: Github,
-    label: 'GitHub',
-    href: LINKS.github,
-    color: 'magenta',
-  },
-]
 
 export function Contact() {
   return (
-    <Section id="contact" title="Let's Connect">
-      <div className="relative">
-        {/* PixelBlast background */}
-        <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }}>
+    <Section id="contact" title="Get in Touch">
+      <div className="relative flex flex-col items-center gap-6">
+        {/* Hidden PixelBlast - kept for future use */}
+        <div className="hidden">
           <PixelBlast
             variant="square"
             pixelSize={4}
@@ -54,65 +29,21 @@ export function Contact() {
           />
         </div>
 
-        {/* Background Beams */}
-        <BackgroundBeams className="opacity-20" />
+        <p className="text-white/60 text-center max-w-md whitespace-nowrap">
+          I'm always open to discussing AI projects, research collaborations, or opportunities in AI engineering.
+        </p>
 
-        <motion.div
+        <motion.a
+          href={LINKS.email}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative z-10"
+          className="inline-flex items-center gap-2 rounded-lg bg-white/5 px-6 py-3 text-sm font-medium text-white ring-1 ring-white/10 backdrop-blur-xl transition-all hover:bg-white/10 hover:ring-neon-cyan/50"
         >
-          <Card glowColor="violet" className="max-w-xl mx-auto p-8 text-center relative" static>
-            {/* Solid background to block PixelBlast behind the card */}
-            <div className="absolute inset-0 bg-cosmic-abyss/95 rounded-xl" />
-
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, type: 'spring' }}
-              className="inline-flex rounded-full bg-neon-violet/20 p-4 mb-6 relative"
-            >
-              <Mail className="h-8 w-8 text-neon-violet" />
-            </motion.div>
-
-            <h3 className="text-2xl font-semibold text-white relative">Get in Touch</h3>
-            <p className="mt-4 text-white/60 relative">
-              I'm always open to discussing AI projects, research collaborations,
-              or opportunities in AI engineering.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-4 relative">
-              {contactLinks.map((link, index) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  target={link.label !== 'Email' ? '_blank' : undefined}
-                  rel={link.label !== 'Email' ? 'noreferrer' : undefined}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
-                  className="flex items-center gap-4 rounded-lg bg-white/5 px-6 py-4 text-left relative"
-                >
-                  <link.icon
-                    className={`h-5 w-5 ${
-                      link.color === 'violet'
-                        ? 'text-neon-violet'
-                        : link.color === 'cyan'
-                        ? 'text-neon-cyan'
-                        : 'text-neon-magenta'
-                    }`}
-                  />
-                  <span className="flex-1 font-medium text-white/80">{link.label}</span>
-                  <ExternalLink className="h-4 w-4 text-white/30" />
-                </motion.a>
-              ))}
-            </div>
-          </Card>
-        </motion.div>
+          <Mail className="h-4 w-4 text-neon-cyan" />
+          Send me an email
+        </motion.a>
       </div>
     </Section>
   )

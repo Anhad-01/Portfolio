@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, MapPin, Download } from 'lucide-react'
+import { MapPin, Download } from 'lucide-react'
 import { Container } from '../ui/Container.jsx'
 import { TypewriterEffect } from '../effects/TypewriterEffect.jsx'
 import { FloatingTechIcons } from '../effects/FloatingTechIcons.jsx'
@@ -88,40 +88,6 @@ export function Hero() {
             >
               <Download className="h-4 w-4" />
               Download Resume
-            </motion.a>
-
-            <motion.a
-              href={LINKS.email}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 rounded-lg bg-white/5 px-6 py-3 text-sm font-medium text-white/80 ring-1 ring-white/10 backdrop-blur-xl transition-all hover:bg-white/10 hover:ring-neon-cyan/50"
-            >
-              <Mail className="h-4 w-4 text-neon-cyan" />
-              Contact Me
-            </motion.a>
-
-            <motion.a
-              href={LINKS.github}
-              target="_blank"
-              rel="noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 rounded-lg bg-white/5 px-6 py-3 text-sm font-medium text-white/80 ring-1 ring-white/10 backdrop-blur-xl transition-all hover:bg-white/10 hover:ring-white/20"
-            >
-              <Github className="h-4 w-4" />
-              GitHub
-            </motion.a>
-
-            <motion.a
-              href={LINKS.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 rounded-lg bg-white/5 px-6 py-3 text-sm font-medium text-white/80 ring-1 ring-white/10 backdrop-blur-xl transition-all hover:bg-white/10 hover:ring-neon-cyan/50"
-            >
-              <Linkedin className="h-4 w-4 text-neon-cyan" />
-              LinkedIn
             </motion.a>
           </motion.div>
 

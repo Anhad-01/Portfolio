@@ -1,46 +1,45 @@
 import { motion } from 'framer-motion'
 import { Section } from '../ui/Section.jsx'
-import { OrbitingCircles } from '../ui/OrbitingCircles.jsx'
-import { SKILLS } from '../../data/content.js'
+import LogoLoop from '../ui/LogoLoop.jsx'
+import { SiGithub, SiDocker, SiArduino, SiPython, SiLangchain, SiTensorflow, SiScikitlearn, SiReact, SiStreamlit, SiJupyter } from 'react-icons/si'
 import { fadeUp } from '../../lib/motion.js'
 
-export function Skills() {
-  const radii = [130, 230, 340]
-  const durations = [30, 45, 60]
+const techLogos = [
+  { node: <SiGithub />, title: "GitHub", href: "https://github.com" },
+  { node: <SiDocker />, title: "Docker", href: "https://docker.com" },
+  { node: <SiArduino />, title: "Arduino", href: "https://arduino.cc" },
+  { node: <SiPython />, title: "Python", href: "https://python.org" },
+  { node: <SiLangchain />, title: "LangChain", href: "https://langchain.com" },
+  { node: <SiTensorflow />, title: "TensorFlow", href: "https://tensorflow.org" },
+  { node: <SiScikitlearn />, title: "Scikit Learn", href: "https://scikit-learn.org" },
+  { node: <SiReact />, title: "React", href: "https://react.dev" },
+  { node: <SiStreamlit />, title: "Streamlit", href: "https://streamlit.io" },
+  { node: <SiJupyter />, title: "Jupyter", href: "https://jupyter.org" },
+]
 
+export function Skills() {
   return (
-    <Section id="skills" title="Technical Expertise">
+    <Section id="skills" title="Skills">
       <motion.div
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: '-100px' }}
-        className="relative flex h-[800px] w-full items-center justify-center overflow-hidden"
+        className="w-full"
       >
-        <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-white/60 bg-clip-text text-center text-4xl font-semibold leading-none text-transparent">
-          Tech Stack
-        </span>
-
-        {Object.entries(SKILLS).map(([category, skills], categoryIndex) => (
-          <OrbitingCircles
-            key={category}
-            className="absolute inset-0"
-            radius={radii[categoryIndex]}
-            duration={durations[categoryIndex]}
-            reverse={categoryIndex % 2 !== 0}
-            iconSize={30}
-          >
-            {skills.map((skill) => (
-              <div
-                key={skill}
-                className="flex items-center justify-center rounded-full bg-white/10 px-4 py-2 text-xs font-medium text-white shadow-glow-violet ring-1 ring-white/20 backdrop-blur-md"
-                style={{ width: 'max-content', height: 'auto', whiteSpace: 'nowrap' }}
-              >
-                {skill}
-              </div>
-            ))}
-          </OrbitingCircles>
-        ))}
+        <div className="w-full overflow-hidden">
+          <LogoLoop
+            logos={techLogos}
+            speed={40}
+            direction="left"
+            logoHeight={48}
+            gap={60}
+            scaleOnHover={true}
+            fadeOut={true}
+            fadeOutColor="#120F17"
+            ariaLabel="Tech stack logos"
+          />
+        </div>
       </motion.div>
     </Section>
   )

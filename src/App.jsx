@@ -4,12 +4,14 @@ import { Navigation } from './components/sections/Navigation.jsx'
 import { ScrollProgress } from './components/sections/ScrollProgress.jsx'
 import { Hero } from './components/sections/Hero.jsx'
 import { About } from './components/sections/About.jsx'
+import { Skills } from './components/sections/Skills.jsx'
 import { Experience } from './components/sections/Experience.jsx'
 import { Projects } from './components/sections/Projects.jsx'
 import { Achievements } from './components/sections/Achievements.jsx'
 import { Blog } from './components/sections/Blog.jsx'
 import { Contact } from './components/sections/Contact.jsx'
 import { Footer } from './components/sections/Footer.jsx'
+import { SocialBar } from './components/ui/SocialBar.jsx'
 
 
 export default function App() {
@@ -18,6 +20,7 @@ export default function App() {
       <CosmicBackground />
       <ScrollProgress />
       <Navigation />
+      <SocialBar />
 
       <AnimatePresence mode="wait">
         <motion.main
@@ -34,6 +37,7 @@ export default function App() {
             <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-neon-violet/5 to-transparent" />
 
             <About />
+            <Skills />
             <Experience />
             <Projects />
             <Achievements />

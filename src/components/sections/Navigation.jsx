@@ -15,6 +15,7 @@ const navItems = [
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('about')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,28 @@ export function Navigation() {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const sectionIds = navItems.map(item => item.id)
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id)
+      if (element) observer.observe(element)
+    })
+
+    return () => observer.disconnect()
   }, [])
 
   const scrollTo = (id) => {
@@ -64,7 +87,12 @@ export function Navigation() {
                   onClick={() => scrollTo(item.id)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-4 py-2 text-sm text-white/60 transition-colors hover:text-white rounded-lg hover:bg-white/5"
+                  className={cn(
+                    'px-4 py-2 text-sm rounded-lg transition-all',
+                    activeSection === item.id
+                      ? 'text-neon-cyan bg-neon-cyan/10 ring-1 ring-neon-cyan/30 shadow-glow-cyan'
+                      : 'text-white/60 hover:text-white hover:bg-white/5'
+                  )}
                 >
                   {item.label}
                 </motion.button>
@@ -98,7 +126,12 @@ export function Navigation() {
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
                   whileTap={{ scale: 0.95 }}
-                  className="px-4 py-3 text-left text-white/60 transition-colors hover:text-white rounded-lg hover:bg-white/5"
+                  className={cn(
+                    'px-4 py-3 text-left rounded-lg transition-all',
+                    activeSection === item.id
+                      ? 'text-neon-cyan bg-neon-cyan/10 ring-1 ring-neon-cyan/30'
+                      : 'text-white/60 hover:text-white hover:bg-white/5'
+                  )}
                 >
                   {item.label}
                 </motion.button>

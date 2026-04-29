@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { ArrowLeft, Calendar, Clock } from 'lucide-react'
 import { BLOGPOSTS } from '../../data/content.js'
+import { Footer } from '../sections/Footer.jsx'
+import { SocialBar } from '../ui/SocialBar.jsx'
 
 export function BlogPost() {
   const { slug } = useParams()
@@ -45,10 +47,12 @@ export function BlogPost() {
             className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-neon-cyan transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Portfolio
+            Back
           </Link>
         </div>
       </nav>
+
+      <SocialBar />
 
       {/* Blog content */}
       <main className="max-w-3xl mx-auto px-6 pt-28 pb-20">
@@ -164,6 +168,7 @@ export function BlogPost() {
           </>
         )}
       </main>
+      <Footer />
     </div>
   )
 }
