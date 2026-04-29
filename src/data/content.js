@@ -207,14 +207,14 @@ export const BLOGPOSTS = [
     tags: [],
   },
   {
-    title: 'From Clueless to Podium: A Practical Hackathon Survival Guide',
+    title: 'The Hackathon Playbook Nobody Hands You at Registration',
     excerpt: 'What I learned from participating in multiple hackathons and how to make the most of them.',
     date: '2026-03-13',
-    slug: 'from-clueless-to-podium',
+    slug: 'the-hackathon-playbook',
     image: '/images/blogs/hackathon.png',
     link: {
       label: 'Read more',
-      href: '/blogs/from-clueless-to-podium',
+      href: '/blogs/the-hackathon-playbook',
     },
     tags: [],
   },

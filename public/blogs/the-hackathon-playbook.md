@@ -1,4 +1,4 @@
-# From Clueless to Podium: A Practical Hackathon Survival Guide
+# The Hackathon Playbook Nobody Hands You at Registration
 
 *What I learned from participating in multiple hackathons and how to make the most of them.*
 
