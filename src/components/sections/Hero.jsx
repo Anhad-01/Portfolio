@@ -8,10 +8,9 @@ import { fadeUp, stagger } from '../../lib/motion.js'
 import Particles from '../effects/Particles.jsx'
 
 const TYPED_WORDS = [
-  'AI Engineer',
-  'Deep Learning Developer',
-  'Computer Vision Specialist',
-  'Full-Stack AI Builder',
+  'Agentic AI Expert',
+  'Automations Specialist',
+  'Full-Stack Developer',
 ]
 
 export function Hero() {
@@ -68,9 +67,9 @@ export function Hero() {
           {/* Description */}
           <motion.p
             variants={fadeUp}
-            className="mt-6 max-w-xl text-white/60"
+            className="mt-6 max-w-xl text-white/60 whitespace-nowrap"
           >
-            Building intelligent systems through Deep Learning, Computer Vision,
+            Building intelligent systems through Agentic AI, NLP,
             and innovative web technologies.
           </motion.p>
 

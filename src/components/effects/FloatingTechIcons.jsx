@@ -4,11 +4,11 @@ import { cn } from '../../lib/cn'
 
 const techItems = [
   { icon: Brain, label: 'AI/ML', color: 'text-neon-violet' },
-  { icon: Cpu, label: 'Deep Learning', color: 'text-neon-cyan' },
+  { icon: Zap, label: 'NLP', color: 'text-neon-magenta' },
+  { icon: Cpu, label: 'Agentic AI', color: 'text-neon-cyan' },
   { icon: Database, label: 'Data Science', color: 'text-neon-magenta' },
   { icon: Code2, label: 'Full-Stack', color: 'text-neon-violet' },
   { icon: Layers, label: 'Computer Vision', color: 'text-neon-cyan' },
-  { icon: Zap, label: 'NLP/LLMs', color: 'text-neon-magenta' },
 ]
 
 export function FloatingTechIcons({ className }) {
