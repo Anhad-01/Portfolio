@@ -25,20 +25,22 @@ export function Skills() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: '-100px' }}
-        className="w-full -mx-4"
+        className="w-full"
       >
-        <div className="w-[calc(100%+2rem)] overflow-hidden">
-          <LogoLoop
-            logos={techLogos}
-            speed={40}
-            direction="left"
-            logoHeight={56}
-            gap={70}
-            scaleOnHover={true}
-            fadeOut={true}
-            fadeOutColor="#120F17"
-            ariaLabel="Tech stack logos"
-          />
+        <div className="relative left-1/2 -ml-[50vw] w-[100vw] overflow-hidden">
+          <div className="flex items-center justify-center">
+            <LogoLoop
+              logos={techLogos}
+              speed={40}
+              direction="left"
+              logoHeight={56}
+              gap={70}
+              scaleOnHover={true}
+              fadeOut={true}
+              fadeOutColor="#030014"
+              ariaLabel="Tech stack logos"
+            />
+          </div>
         </div>
       </motion.div>
     </Section>

@@ -37,7 +37,7 @@ export function Navigation() {
           }
         })
       },
-      { threshold: 0.1, rootMargin: '-80px 0px -60% 0px' }
+      { threshold: 0.2, rootMargin: '-90px 0px -85% 0px' }
     )
 
     sectionIds.forEach((id) => {

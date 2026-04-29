@@ -15,6 +15,7 @@ export default function LogoLoop({
 }) {
   const containerRef = useRef(null)
   const trackRef = useRef(null)
+  const animationRef = useRef(null)
   const [isReady, setIsReady] = useState(false)
 
   useEffect(() => {
@@ -22,7 +23,6 @@ export default function LogoLoop({
 
     const track = trackRef.current
     
-    // Force layout calculation
     track.style.visibility = 'hidden'
     document.body.offsetHeight
     track.style.visibility = 'visible'
@@ -31,18 +31,20 @@ export default function LogoLoop({
       const allLogos = track.children
       let totalWidth = 0
       
-      // Calculate total width of all logos
       for (let i = 0; i < allLogos.length; i++) {
         totalWidth += allLogos[i].offsetWidth + gap
       }
       
-      // Get the width of half (one set of logos)
       const halfWidth = totalWidth / 2
       
       const x = direction === 'left' ? 0 : -halfWidth
       gsap.set(track, { x })
       
-      const tween = gsap.to(track, {
+      if (animationRef.current) {
+        animationRef.current.kill()
+      }
+      
+      animationRef.current = gsap.to(track, {
         x: direction === 'left' ? -halfWidth : 0,
         duration: halfWidth / speed,
         ease: 'none',
@@ -50,14 +52,14 @@ export default function LogoLoop({
       })
 
       const handleMouseEnter = () => {
-        if (hoverSpeed > 0) {
-          gsap.to(tween, { timeScale: 0, overwrite: true })
+        if (animationRef.current) {
+          gsap.to(animationRef.current, { timeScale: 0, overwrite: true })
         }
       }
 
       const handleMouseLeave = () => {
-        if (hoverSpeed > 0) {
-          gsap.to(tween, { timeScale: 1, overwrite: true })
+        if (animationRef.current) {
+          gsap.to(animationRef.current, { timeScale: 1, overwrite: true })
         }
       }
 
@@ -66,17 +68,13 @@ export default function LogoLoop({
       container?.addEventListener('mouseleave', handleMouseLeave)
 
       setIsReady(true)
-
-      return () => {
-        tween.kill()
-        container?.removeEventListener('mouseenter', handleMouseEnter)
-        container?.removeEventListener('mouseleave', handleMouseLeave)
-      }
     }
 
-    // Small delay to ensure DOM is ready
-    const timeout = setTimeout(setPositions, 100)
-    return () => clearTimeout(timeout)
+    const timeout = setTimeout(setPositions, 50)
+    return () => {
+      clearTimeout(timeout)
+      if (animationRef.current) animationRef.current.kill()
+    }
   }, [logos, speed, direction, gap, hoverSpeed])
 
   const renderLogo = (logo, index) => {
@@ -120,13 +118,13 @@ export default function LogoLoop({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden ${isReady ? '' : 'invisible'}`}
+      className={`relative overflow-hidden w-full ${isReady ? '' : 'invisible'}`}
       style={{ height: logoHeight + 20 }}
       aria-label={ariaLabel}
     >
       {fadeOut && (
         <div
-          className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+          className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
           style={{
             background: `linear-gradient(to right, ${fadeOutColor}, transparent)`,
           }}
@@ -134,7 +132,7 @@ export default function LogoLoop({
       )}
       {fadeOut && (
         <div
-          className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+          className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
           style={{
             background: `linear-gradient(to left, ${fadeOutColor}, transparent)`,
           }}
