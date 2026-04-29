@@ -9,6 +9,7 @@ const navItems = [
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
   { id: 'achievements', label: 'Achievements' },
+  { id: 'blog', label: 'Blogs' },
   { id: 'contact', label: 'Contact' },
 ]
 
@@ -36,7 +37,7 @@ export function Navigation() {
           }
         })
       },
-      { threshold: 0.3 }
+      { threshold: 0.2, rootMargin: '-100px 0px -50% 0px' }
     )
 
     sectionIds.forEach((id) => {

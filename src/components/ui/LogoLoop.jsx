@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 
 export default function LogoLoop({
@@ -15,46 +15,69 @@ export default function LogoLoop({
 }) {
   const containerRef = useRef(null)
   const trackRef = useRef(null)
+  const [isReady, setIsReady] = useState(false)
 
   useEffect(() => {
     if (!trackRef.current || logos.length === 0) return
 
     const track = trackRef.current
-    const totalWidth = track.scrollWidth / 2
+    
+    // Force layout calculation
+    track.style.visibility = 'hidden'
+    document.body.offsetHeight
+    track.style.visibility = 'visible'
 
-    const x = direction === 'left' ? 0 : -totalWidth
+    const setPositions = () => {
+      const allLogos = track.children
+      let totalWidth = 0
+      
+      // Calculate total width of all logos
+      for (let i = 0; i < allLogos.length; i++) {
+        totalWidth += allLogos[i].offsetWidth + gap
+      }
+      
+      // Get the width of half (one set of logos)
+      const halfWidth = totalWidth / 2
+      
+      const x = direction === 'left' ? 0 : -halfWidth
+      gsap.set(track, { x })
+      
+      const tween = gsap.to(track, {
+        x: direction === 'left' ? -halfWidth : 0,
+        duration: halfWidth / speed,
+        ease: 'none',
+        repeat: -1,
+      })
 
-    gsap.set(track, { x })
+      const handleMouseEnter = () => {
+        if (hoverSpeed > 0) {
+          gsap.to(tween, { timeScale: 0, overwrite: true })
+        }
+      }
 
-    const tween = gsap.to(track, {
-      x: direction === 'left' ? -totalWidth : 0,
-      duration: totalWidth / speed,
-      ease: 'none',
-      repeat: -1,
-    })
+      const handleMouseLeave = () => {
+        if (hoverSpeed > 0) {
+          gsap.to(tween, { timeScale: 1, overwrite: true })
+        }
+      }
 
-    const handleMouseEnter = () => {
-      if (hoverSpeed > 0) {
-        tween.timeScale(0)
+      const container = containerRef.current
+      container?.addEventListener('mouseenter', handleMouseEnter)
+      container?.addEventListener('mouseleave', handleMouseLeave)
+
+      setIsReady(true)
+
+      return () => {
+        tween.kill()
+        container?.removeEventListener('mouseenter', handleMouseEnter)
+        container?.removeEventListener('mouseleave', handleMouseLeave)
       }
     }
 
-    const handleMouseLeave = () => {
-      if (hoverSpeed > 0) {
-        tween.timeScale(1)
-      }
-    }
-
-    const container = containerRef.current
-    container?.addEventListener('mouseenter', handleMouseEnter)
-    container?.addEventListener('mouseleave', handleMouseLeave)
-
-    return () => {
-      tween.kill()
-      container?.removeEventListener('mouseenter', handleMouseEnter)
-      container?.removeEventListener('mouseleave', handleMouseLeave)
-    }
-  }, [logos, speed, direction, hoverSpeed])
+    // Small delay to ensure DOM is ready
+    const timeout = setTimeout(setPositions, 100)
+    return () => clearTimeout(timeout)
+  }, [logos, speed, direction, gap, hoverSpeed])
 
   const renderLogo = (logo, index) => {
     const content = logo.src ? (
@@ -65,8 +88,8 @@ export default function LogoLoop({
         style={{ height: logoHeight }}
       />
     ) : logo.node ? (
-      <div style={{ height: logoHeight }} className="flex items-center justify-center text-white">
-        {logo.node}
+      <div style={{ height: logoHeight }} className="flex items-center justify-center">
+        <div style={{ fontSize: logoHeight * 0.7 }}>{logo.node}</div>
       </div>
     ) : (
       <div
@@ -91,15 +114,19 @@ export default function LogoLoop({
     )
   }
 
+  // Duplicate logos to ensure smooth loop
+  const duplicatedLogos = [...logos, ...logos, ...logos]
+
   return (
     <div
       ref={containerRef}
-      style={{ height: logoHeight + 20, position: 'relative', overflow: 'hidden' }}
+      className={`relative overflow-hidden ${isReady ? '' : 'invisible'}`}
+      style={{ height: logoHeight + 20 }}
       aria-label={ariaLabel}
     >
       {fadeOut && (
         <div
-          className="absolute left-0 top-0 bottom-0 w-20 z-10"
+          className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
           style={{
             background: `linear-gradient(to right, ${fadeOutColor}, transparent)`,
           }}
@@ -107,7 +134,7 @@ export default function LogoLoop({
       )}
       {fadeOut && (
         <div
-          className="absolute right-0 top-0 bottom-0 w-20 z-10"
+          className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
           style={{
             background: `linear-gradient(to left, ${fadeOutColor}, transparent)`,
           }}
@@ -118,7 +145,7 @@ export default function LogoLoop({
         className="flex absolute top-1/2 -translate-y-1/2"
         style={{ width: 'max-content' }}
       >
-        {[...logos, ...logos].map((logo, index) => renderLogo(logo, index))}
+        {duplicatedLogos.map((logo, index) => renderLogo(logo, index))}
       </div>
     </div>
   )

@@ -29,7 +29,7 @@ export function Contact() {
           />
         </div>
 
-        <p className="text-white/60 text-center max-w-md whitespace-nowrap">
+        <p className="text-white/60 text-center max-w-md">
           I'm always open to discussing AI projects, research collaborations, or opportunities in AI engineering.
         </p>
 
