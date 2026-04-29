@@ -448,7 +448,7 @@ const MagicBento = ({
                       href={card.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-2 text-xs text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center gap-1 z-20"
+                      className="mt-2 text-xs text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-1 z-20"
                     >
                       View Project →
                     </a>

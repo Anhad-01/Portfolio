@@ -7,7 +7,7 @@ import { stagger } from '../../lib/motion.js'
 export function Projects() {
   // Transform PROJECTS data into the format MagicBento expects
   const bentoCards = PROJECTS.map((project) => ({
-    color: '#120F17',
+    color: '#0D1B2F',
     title: project.title,
     description: project.desc,
     image: project.image || '',
@@ -34,7 +34,7 @@ export function Projects() {
           clickEffect
           spotlightRadius={400}
           particleCount={0}
-          glowColor="132, 0, 255"
+          glowColor="78, 163, 255"
           disableAnimations={false}
         />
       </motion.div>

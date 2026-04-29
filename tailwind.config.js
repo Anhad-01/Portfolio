@@ -8,15 +8,15 @@ export default {
       },
       colors: {
         cosmic: {
-          void: '#000000',
-          abyss: '#0a0a0a',
-          nebula: '#1a1a1a',
-          storm: '#262626',
+          void: '#07111F',
+          abyss: '#0D1B2F',
+          nebula: '#12243D',
+          storm: '#23344D',
         },
         neon: {
-          violet: '#ffffff',
-          cyan: '#a1a1aa',
-          magenta: '#71717a',
+          violet: '#7C5CFF',
+          cyan: '#7DD3FC',
+          magenta: '#4EA3FF',
         },
         ink: {
           950: '#05060a',
@@ -24,28 +24,19 @@ export default {
         },
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(255,255,255,0.25), 0 0 22px rgba(255,255,255,0.25)',
-        glowCyan:
-          '0 0 0 1px rgba(161,161,172,0.25), 0 0 20px rgba(161,161,172,0.22)',
-        'glow-violet':
-          '0 0 30px rgba(255,255,255,0.35), 0 0 60px rgba(255,255,255,0.15)',
-        'glow-cyan':
-          '0 0 25px rgba(161,161,172,0.4), 0 0 50px rgba(161,161,172,0.15)',
-        'glow-magenta': '0 0 20px rgba(113,113,122,0.3)',
-        glass:
-          'inset 0 0 0 1px rgba(255,255,255,0.08), 0 4px 30px rgba(0,0,0,0.3)',
+        glow: '0 0 0 1px rgba(78, 163, 255, 0.25), 0 0 22px rgba(78, 163, 255, 0.25)',
+        glowCyan: '0 0 0 1px rgba(125, 211, 252, 0.25), 0 0 20px rgba(125, 211, 252, 0.22)',
+        'glow-violet': '0 0 30px rgba(124, 92, 255, 0.35), 0 0 60px rgba(124, 92, 255, 0.15)',
+        'glow-cyan': '0 0 25px rgba(125, 211, 252, 0.4), 0 0 50px rgba(125, 211, 252, 0.15)',
+        'glow-magenta': '0 0 20px rgba(78, 163, 255, 0.3)',
+        glass: 'inset 0 0 0 1px rgba(255,255,255,0.08), 0 4px 30px rgba(0,0,0,0.3)',
       },
       backgroundImage: {
-        grid:
-          'linear-gradient(to right, rgba(255,255,255,0.055) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.055) 1px, transparent 1px)',
-        glow:
-          'radial-gradient(600px circle at var(--x, 50%) var(--y, 20%), rgba(255,255,255,0.15), transparent 40%), radial-gradient(520px circle at var(--x2, 70%) var(--y2, 60%), rgba(161,161,172,0.1), transparent 42%)',
-        'cosmic-gradient':
-          'radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.1), transparent 50%)',
-        'glass-gradient':
-          'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))',
-        'aurora-gradient':
-          'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255,255,255,0.2), transparent), radial-gradient(ellipse 60% 40% at 100% 0%, rgba(161,161,172,0.1), transparent), radial-gradient(ellipse 50% 30% at 0% 50%, rgba(113,113,122,0.1), transparent)',
+        grid: 'linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)',
+        glow: 'radial-gradient(600px circle at var(--x, 50%) var(--y, 20%), rgba(78, 163, 255, 0.15), transparent 40%), radial-gradient(520px circle at var(--x2, 70%) var(--y2, 60%), rgba(125, 211, 252, 0.1), transparent 42%)',
+        'cosmic-gradient': 'radial-gradient(ellipse at 50% 0%, rgba(78, 163, 255, 0.1), transparent 50%)',
+        'glass-gradient': 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))',
+        'aurora-gradient': 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 92, 255, 0.2), transparent), radial-gradient(ellipse 60% 40% at 100% 0%, rgba(125, 211, 252, 0.1), transparent), radial-gradient(ellipse 50% 30% at 0% 50%, rgba(78, 163, 255, 0.1), transparent)',
       },
       keyframes: {
         float: {

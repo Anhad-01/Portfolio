@@ -19,13 +19,13 @@ export function Hero() {
       {/* Particles background */}
       <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }}>
         <Particles
-          particleColors={["#ffffff"]}
+          particleColors={["#7FBFFF", "#A7D8FF", "#EAF2FF"]}
           particleCount={150}
           particleSpread={10}
           speed={0.1}
           particleBaseSize={100}
           moveParticlesOnHover
-          alphaParticles={false}
+          alphaParticles={true}
           disableRotation={false}
           pixelRatio={1}
         />
