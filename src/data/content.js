@@ -45,6 +45,7 @@ export const EXPERIENCE = [
     role: 'AI Engineer Intern',
     org: 'Edxso',
     website: 'https://www.edxso.com/',
+    roleLink: 'https://drive.google.com/file/d/1FDsbMd-QsFw6Onk3h36tNDSFjjXluLcs/view?usp=drive_link',
     time: 'Feb – Apr 2026',
     bullets: [
       'Developed an AI-powered educational assessment platform with RBAC to evaluate question papers against the National Curriculum Framework.',
@@ -56,6 +57,7 @@ export const EXPERIENCE = [
     role: 'AI/ML Intern',
     org: 'National e-Governance Division, Ministry of Electronics & IT',
     website: 'https://negd.gov.in/',
+    roleLink: 'https://drive.google.com/file/d/1sJS7UolK1zHBNjfaQKpvyUlp66TDA0wX/view?usp=drive_link',
     time: 'Jun – Aug 2025',
     bullets: [
       'Built an Agentic AI powered course recommender using hybrid filtering and semantic search.',
@@ -67,6 +69,7 @@ export const EXPERIENCE = [
     role: 'Web Developer Intern',
     org: 'Craving For Gaming',
     website: 'https://cravingforgaming.in/',
+    roleLink: 'https://drive.google.com/file/d/1er16JaFSptBfZVLt3RQ25wsEwGU8uFsx/view?usp=drive_link',
     time: 'Sep 2024 – Feb 2025',
     bullets: [
       'Optimized website performance and improved UX using HTML/CSS & on-page SEO techniques',
@@ -153,6 +156,7 @@ export const PROJECTS = [
 
 export const ACHIEVEMENTS = [
   {
+    type: 'Publication',
     title: 'Design of an Optimal Planning Framework for Cryosurgical Treatment of Brain Tumor using CNN Segmentation of MRI Images',
     time: '2026',
     desc: 'Co-authored research integrating deep learning-based tumor segmentation with optimization algorithms (K-Medoids, GMM, BPA) for cryosurgical planning. Published in Cryobiology (Elsevier).',
@@ -162,6 +166,7 @@ export const ACHIEVEMENTS = [
     },
   },
   {
+    type: 'Hackathon',
     title: 'TATA Technologies InnoVent Hackathon',
     time: 'Aug 2025',
     desc: 'Developed an AI-driven battery analytics solution for health monitoring, performance prediction and lifecycle management in EVs .Ranked top 31 out of 2,800+ teams.',
@@ -171,6 +176,7 @@ export const ACHIEVEMENTS = [
     },
   },
   {
+    type: 'Hackathon',
     title: 'Hack The Future Hackathon, MoSPI',
     time: 'Mar 2025',
     desc: 'Built a multilingual semantic search app for classifying industries by NIC codes. Integrated voice-to-text, synonym mapping, and intelligent keyword retrieval. Ranked top 20 out of 1000+ teams.',

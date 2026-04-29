@@ -32,7 +32,13 @@ export function Experience() {
                       <Briefcase className="h-4 w-4 text-neon-cyan" />
                       <span className="text-sm text-neon-cyan">{exp.time}</span>
                     </div>
-                    <h3 className="mt-2 text-xl font-semibold text-white">{exp.role}</h3>
+                    {exp.roleLink ? (
+                      <a href={exp.roleLink} target="_blank" rel="noopener noreferrer" className="mt-2 text-xl font-semibold text-white hover:text-neon-cyan transition-colors">
+                        {exp.role}
+                      </a>
+                    ) : (
+                      <h3 className="mt-2 text-xl font-semibold text-white">{exp.role}</h3>
+                    )}
                     {exp.website ? (
                       <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-neon-cyan transition-colors">{exp.org}</a>
                     ) : (

@@ -27,9 +27,9 @@ export function About() {
                 <p className="mt-1 text-sm text-white/60">
                   B.Tech in Information Technology and Mathematical Innovations
                 </p>
-                <p className="text-sm text-neon-cyan">
+                <a href="http://cic.du.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-neon-cyan hover:text-neon-violet transition-colors">
                   Cluster Innovation Centre, University of Delhi
-                </p>
+                </a>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="rounded-full bg-neon-violet/20 px-3 py-1 text-xs font-medium text-neon-violet">
                     CGPA: 9.64/10
@@ -83,7 +83,7 @@ export function About() {
                   impactful solutions through cutting-edge technology.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {['Deep Learning', 'NLP', 'Computer Vision', 'Agentic AI', 'LLMs', 'Full-Stack Development'].map(
+                  {/* {['Deep Learning', 'NLP', 'Computer Vision', 'Agentic AI', 'LLMs', 'Full-Stack Development'].map(
                     (area) => (
                       <span
                         key={area}
@@ -92,7 +92,7 @@ export function About() {
                         {area}
                       </span>
                     )
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

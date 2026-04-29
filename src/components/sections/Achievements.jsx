@@ -42,31 +42,28 @@ export function Achievements() {
           >
             <StarBorder
               as="div"
-              color={current % 2 === 0 ? '#8b5cf6' : '#06b6d4'}
+              color={current % 2 === 0 ? '#7DD3FC' : '#7DD3FC'}
               className="w-full"
             >
               <div className="flex items-start gap-4 text-left">
                 <div
-                  className={`rounded-lg ${
-                    current % 2 === 0 ? 'bg-neon-violet/20' : 'bg-neon-cyan/20'
-                  } p-3 shrink-0`}
+                  className="rounded-lg bg-neon-cyan/20 p-3 shrink-0"
                 >
                   {current === 0 ? (
                     <BookOpen
-                      className={`h-6 w-6 ${
-                        current === 0 ? 'text-neon-violet' : 'text-neon-cyan'
-                      }`}
+                      className="h-6 w-6 text-neon-cyan"
                     />
                   ) : (
                     <Trophy
-                      className={`h-6 w-6 ${
-                        current % 2 === 0 ? 'text-neon-violet' : 'text-neon-cyan'
-                      }`}
+                      className="h-6 w-6 text-neon-cyan"
                     />
                   )}
                 </div>
                 <div className="flex-1 flex flex-col items-start">
                   <div className="flex items-center gap-2">
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-neon-cyan/20 text-neon-cyan">
+                      {ACHIEVEMENTS[current].type}
+                    </span>
                     <span className="text-xs text-white/50">{ACHIEVEMENTS[current].time}</span>
                   </div>
                   <h3 className={`mt-1 font-semibold text-white ${current === 0 ? 'text-base' : 'text-lg'}`}>

@@ -36,7 +36,7 @@ export function Skills() {
             gap={70}
             scaleOnHover={true}
             fadeOut={true}
-            fadeOutColor="#120F17"
+            fadeOutColor="#07111F"
             ariaLabel="Tech stack logos"
           />
         </div>
