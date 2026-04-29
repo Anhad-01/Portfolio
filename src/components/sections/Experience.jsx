@@ -27,20 +27,20 @@ export function Experience() {
 
               <StarBorder as="div" color="#06b6d4" className="w-full">
                 <div className="flex items-start justify-between gap-4 flex-wrap text-left">
-                  <div>
+                  <div className="space-y-1">
                     <div className="flex items-center gap-2">
                       <Briefcase className="h-4 w-4 text-neon-cyan" />
                       <span className="text-sm text-neon-cyan">{exp.time}</span>
                     </div>
                     {exp.roleLink ? (
-                      <a href={exp.roleLink} target="_blank" rel="noopener noreferrer" className="mt-2 text-xl font-semibold text-white hover:text-neon-cyan transition-colors">
+                      <a href={exp.roleLink} target="_blank" rel="noopener noreferrer" className="block text-xl font-semibold text-white hover:text-neon-cyan transition-colors">
                         {exp.role}
                       </a>
                     ) : (
-                      <h3 className="mt-2 text-xl font-semibold text-white">{exp.role}</h3>
+                      <h3 className="text-xl font-semibold text-white">{exp.role}</h3>
                     )}
                     {exp.website ? (
-                      <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-neon-cyan transition-colors">{exp.org}</a>
+                      <a href={exp.website} target="_blank" rel="noopener noreferrer" className="block text-white/60 hover:text-neon-cyan transition-colors">{exp.org}</a>
                     ) : (
                       <p className="text-white/60">{exp.org}</p>
                     )}
