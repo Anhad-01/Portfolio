@@ -27,28 +27,30 @@ export function Navigation() {
   }, [])
 
   useEffect(() => {
-    const sectionIds = navItems.map(item => item.id)
-    
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries.filter(entry => entry.isIntersecting)
-        if (visibleEntries.length > 0) {
-          // Get the topmost visible section
-          const sorted = visibleEntries.sort((a, b) => 
-            a.boundingClientRect.top - b.boundingClientRect.top
-          )
-          setActiveSection(sorted[0].target.id)
+    const handleScroll = () => {
+      const sectionIds = navItems.map(item => item.id)
+      
+      let currentSection = 'about'
+      let minDistance = Infinity
+      
+      sectionIds.forEach((id) => {
+        const element = document.getElementById(id)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          const distance = Math.abs(rect.top - 100) // 100px from top
+          if (rect.top <= 150 && distance < minDistance) {
+            minDistance = distance
+            currentSection = id
+          }
         }
-      },
-      { threshold: 0.15, rootMargin: '-100px 0px -70% 0px' }
-    )
-
-    sectionIds.forEach((id) => {
-      const element = document.getElementById(id)
-      if (element) observer.observe(element)
-    })
-
-    return () => observer.disconnect()
+      })
+      
+      setActiveSection(currentSection)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Initial check
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const scrollTo = (id) => {
