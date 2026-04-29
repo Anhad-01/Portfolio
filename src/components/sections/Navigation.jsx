@@ -31,13 +31,16 @@ export function Navigation() {
     
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
+        const visibleEntries = entries.filter(entry => entry.isIntersecting)
+        if (visibleEntries.length > 0) {
+          // Get the topmost visible section
+          const sorted = visibleEntries.sort((a, b) => 
+            a.boundingClientRect.top - b.boundingClientRect.top
+          )
+          setActiveSection(sorted[0].target.id)
+        }
       },
-      { threshold: 0.2, rootMargin: '-90px 0px -85% 0px' }
+      { threshold: 0.15, rootMargin: '-100px 0px -70% 0px' }
     )
 
     sectionIds.forEach((id) => {
