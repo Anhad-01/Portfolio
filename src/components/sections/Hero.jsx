@@ -91,9 +91,9 @@ export function Hero() {
           </motion.div>
 
           {/* Floating tech icons */}
-          <motion.div variants={fadeUp} className="mt-16">
+          {/* <motion.div variants={fadeUp} className="mt-16">
             <FloatingTechIcons />
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </Container>
     </header>
