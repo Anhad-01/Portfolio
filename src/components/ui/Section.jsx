@@ -16,7 +16,7 @@ export function Section({
   const isInView = useInView(ref, { margin: '-20% 0px -20% 0px', once: true })
 
   return (
-    <section id={id} className={`relative py-14 sm:py-20 ${className}`}>
+    <section id={id} className={`relative py-12 sm:py-18 ${className}`}>
       <Container className={containerClassName}>
         <motion.div
           ref={ref}

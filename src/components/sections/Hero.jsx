@@ -39,7 +39,7 @@ export function Hero() {
         >
           <motion.div
             variants={fadeUp}
-            className="pointer-events-none absolute right-4 top-10 hidden lg:block"
+            className="pointer-events-none absolute right-45 top-22 hidden lg:block"
           >
             <div className="relative h-72 w-72 rounded-full overflow-hidden shadow-glass">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-neon-cyan/25 via-transparent to-neon-violet/25 blur-xl" />
