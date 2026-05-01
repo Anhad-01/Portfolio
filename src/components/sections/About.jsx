@@ -7,7 +7,7 @@ import { fadeUp, stagger } from '../../lib/motion.js'
 
 export function About() {
   return (
-    <Section id="about" title="Education & Background">
+    <Section id="education" title="Education & Background">
       <motion.div
         variants={stagger(0.1)}
         initial="hidden"
@@ -17,10 +17,10 @@ export function About() {
       >
         {/* Education Card */}
         <motion.div variants={fadeUp}>
-          <SpotlightCard glowColor="violet" className="p-6 h-full">
+          <SpotlightCard glowColor="cyan" className="p-6 h-full" disableHover>
             <div className="flex items-start gap-4">
-              <div className="rounded-lg bg-neon-violet/20 p-3">
-                <GraduationCap className="h-6 w-6 text-neon-violet" />
+              <div className="rounded-lg bg-neon-cyan/20 p-3">
+                <GraduationCap className="h-6 w-6 text-neon-cyan" />
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-white">Education</h3>
@@ -31,7 +31,7 @@ export function About() {
                   Cluster Innovation Centre, University of Delhi
                 </a>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="rounded-full bg-neon-violet/20 px-3 py-1 text-xs font-medium text-neon-violet">
+                  <span className="rounded-full bg-neon-cyan/20 px-3 py-1 text-xs font-medium text-neon-cyan">
                     CGPA: 9.64/10
                   </span>
                   <span className="text-xs text-white/40">2022 - 2026</span>
@@ -43,7 +43,7 @@ export function About() {
 
         {/* Quick Facts Card */}
         <motion.div variants={fadeUp}>
-          <SpotlightCard glowColor="cyan" className="p-6 h-full">
+          <SpotlightCard glowColor="cyan" className="p-6 h-full" disableHover>
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-neon-cyan/20 p-3">
                 <Award className="h-6 w-6 text-neon-cyan" />
@@ -52,7 +52,7 @@ export function About() {
                 <h3 className="text-lg font-semibold text-white">Quick Facts</h3>
                 <ul className="mt-3 space-y-2 text-sm text-white/70">
                   <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-neon-violet" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-neon-cyan" />
                     Published research in Cryobiology (Elsevier, 2026)
                   </li>
                   <li className="flex items-center gap-2">
@@ -60,7 +60,7 @@ export function About() {
                     Top 31 in TATA Technologies Hackathon (2,800+ teams)
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-neon-magenta" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-neon-cyan" />
                     Top 20 in Hack The Future (1,000+ teams)
                   </li>
                 </ul>
@@ -71,10 +71,10 @@ export function About() {
 
         {/* Focus Areas */}
         <motion.div variants={fadeUp} className="md:col-span-2">
-          <SpotlightCard glowColor="magenta" className="p-6">
+          <SpotlightCard glowColor="cyan" className="p-6" disableHover>
             <div className="flex items-start gap-4">
-              <div className="rounded-lg bg-neon-magenta/20 p-3">
-                <BookOpen className="h-6 w-6 text-neon-magenta" />
+              <div className="rounded-lg bg-neon-cyan/20 p-3">
+                <BookOpen className="h-6 w-6 text-neon-cyan" />
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-white">Focus Areas</h3>

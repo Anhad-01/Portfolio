@@ -5,6 +5,7 @@ import { cn } from '../../lib/cn'
 
 const navItems = [
   { id: 'about', label: 'About' },
+  { id: 'education', label: 'Education' },
   { id: 'skills', label: 'Skills' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
@@ -28,16 +29,24 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sectionIds = navItems.map(item => item.id)
+      const scrollY = window.scrollY
       
-      let currentSection = 'about'
+      // If at the very top (hero section), show "About"
+      if (scrollY < 100) {
+        setActiveSection('about')
+        return
+      }
+      
+      const sectionIds = navItems.map(item => item.id).filter(id => id !== 'about')
+      
+      let currentSection = 'education'
       let minDistance = Infinity
       
       sectionIds.forEach((id) => {
         const element = document.getElementById(id)
         if (element) {
           const rect = element.getBoundingClientRect()
-          const distance = Math.abs(rect.top - 100) // 100px from top
+          const distance = Math.abs(rect.top - 100)
           if (rect.top <= 150 && distance < minDistance) {
             minDistance = distance
             currentSection = id
@@ -49,7 +58,7 @@ export function Navigation() {
     }
     
     window.addEventListener('scroll', handleScroll)
-    handleScroll() // Initial check
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 

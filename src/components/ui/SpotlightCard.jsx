@@ -2,13 +2,13 @@ import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '../../lib/cn'
 
-export function SpotlightCard({ children, className, glowColor = 'violet' }) {
+export function SpotlightCard({ children, className, glowColor = 'violet', disableHover = false }) {
   const ref = useRef(null)
   const [mouseX, setMouseX] = useState(0)
   const [mouseY, setMouseY] = useState(0)
 
   const handleMouseMove = (e) => {
-    if (!ref.current) return
+    if (!ref.current || disableHover) return
     const rect = ref.current.getBoundingClientRect()
     setMouseX(e.clientX - rect.left)
     setMouseY(e.clientY - rect.top)
@@ -36,7 +36,10 @@ export function SpotlightCard({ children, className, glowColor = 'violet' }) {
     >
       {/* Spotlight gradient on mouse */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className={cn(
+          'pointer-events-none absolute inset-0 transition-opacity duration-300',
+          disableHover ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'
+        )}
         style={{
           background: `radial-gradient(400px circle at ${mouseX}px ${mouseY}px, ${glowGradients[glowColor]}, transparent 40%)`,
         }}

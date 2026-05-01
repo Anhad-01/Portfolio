@@ -35,7 +35,7 @@ export function TypewriterEffect({
 
   return (
     <span className={cn('relative', className)}>
-      <span className="bg-gradient-to-r from-neon-violet via-neon-cyan to-neon-magenta bg-clip-text text-transparent">
+      <span className="text-neon-cyan">
         {currentText}
       </span>
       <span className="animate-pulse ml-0.5 text-neon-cyan">|</span>

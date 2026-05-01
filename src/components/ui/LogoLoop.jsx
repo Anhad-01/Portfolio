@@ -15,7 +15,6 @@ export default function LogoLoop({
 }) {
   const containerRef = useRef(null)
   const trackRef = useRef(null)
-  const animationRef = useRef(null)
   const [isReady, setIsReady] = useState(false)
 
   useEffect(() => {
@@ -23,44 +22,38 @@ export default function LogoLoop({
 
     const track = trackRef.current
     
-    track.style.visibility = 'hidden'
-    document.body.offsetHeight
-    track.style.visibility = 'visible'
-
     const setPositions = () => {
-      const allLogos = track.children
-      let totalWidth = 0
+      const cloneCount = 3
+      const totalLogos = logos.length * cloneCount
+      const firstSetWidth = track.scrollWidth / cloneCount
       
-      for (let i = 0; i < allLogos.length; i++) {
-        totalWidth += allLogos[i].offsetWidth + gap
-      }
-      
-      const halfWidth = totalWidth / 2
-      
-      const x = direction === 'left' ? 0 : -halfWidth
+      const x = direction === 'left' ? 0 : -firstSetWidth
       gsap.set(track, { x })
-      
-      if (animationRef.current) {
-        animationRef.current.kill()
+
+      const animate = () => {
+        const currentX = gsap.getProperty(track, 'x')
+        const targetX = direction === 'left' ? -firstSetWidth : 0
+        
+        if (Math.abs(currentX - targetX) < 1) {
+          gsap.set(track, { x: direction === 'left' ? 0 : -firstSetWidth })
+        }
+        
+        gsap.to(track, {
+          x: targetX,
+          duration: firstSetWidth / speed,
+          ease: 'none',
+          repeat: -1,
+        })
       }
-      
-      animationRef.current = gsap.to(track, {
-        x: direction === 'left' ? -halfWidth : 0,
-        duration: halfWidth / speed,
-        ease: 'none',
-        repeat: -1,
-      })
+
+      animate()
 
       const handleMouseEnter = () => {
-        if (animationRef.current) {
-          gsap.to(animationRef.current, { timeScale: 0, overwrite: true })
-        }
+        gsap.globalTimeline.pause()
       }
 
       const handleMouseLeave = () => {
-        if (animationRef.current) {
-          gsap.to(animationRef.current, { timeScale: 1, overwrite: true })
-        }
+        gsap.globalTimeline.resume()
       }
 
       const container = containerRef.current
@@ -68,13 +61,16 @@ export default function LogoLoop({
       container?.addEventListener('mouseleave', handleMouseLeave)
 
       setIsReady(true)
+
+      return () => {
+        gsap.killTweensOf(track)
+        container?.removeEventListener('mouseenter', handleMouseEnter)
+        container?.removeEventListener('mouseleave', handleMouseLeave)
+      }
     }
 
-    const timeout = setTimeout(setPositions, 50)
-    return () => {
-      clearTimeout(timeout)
-      if (animationRef.current) animationRef.current.kill()
-    }
+    const timeout = setTimeout(setPositions, 100)
+    return () => clearTimeout(timeout)
   }, [logos, speed, direction, gap, hoverSpeed])
 
   const renderLogo = (logo, index) => {
@@ -112,7 +108,6 @@ export default function LogoLoop({
     )
   }
 
-  // Duplicate logos to ensure smooth loop
   const duplicatedLogos = [...logos, ...logos, ...logos]
 
   return (
