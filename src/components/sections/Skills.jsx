@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Section } from '../ui/Section.jsx'
 import { Marquee } from '../ui/Marquee.jsx'
-import { SiGithub, SiDocker, SiArduino, SiPython, SiLangchain, SiTensorflow, SiScikitlearn, SiReact, SiStreamlit, SiJupyter, SiFastapi, SiCrewai, SiPostgresql, SiMysql, SiComsol, SiN8N } from 'react-icons/si'
+import { SiGithub, SiDocker, SiArduino, SiPython, SiLangchain, SiTensorflow, SiScikitlearn, SiReact, SiStreamlit, SiJupyter, SiFastapi, SiCrewai, SiPostgresql, SiMysql, SiComsol, SiN8N, SiMathworks } from 'react-icons/si'
 import { fadeUp } from '../../lib/motion.js'
 
 const techLogos = [
@@ -19,7 +19,7 @@ const techLogos = [
   { node: <SiCrewai size={60} color="#FF5A1F" />, title: "CrewAI", href: "https://www.crewai.com" },
   { node: <SiPostgresql size={60} color="#4169E1" />, title: "PostgreSQL", href: "https://www.postgresql.org" },
   { node: <SiMysql size={60} color="#4479A1" />, title: "MySQL", href: "https://www.mysql.com" },
-  { node: <span className="text-sm font-bold tracking-normal text-[#FF8C00]">MATLAB</span>, title: "MATLAB", href: "https://www.mathworks.com/products/matlab.html" },
+  { node: <SiMathworks size={60} color="#FF8C00" />, title: "MATLAB", href: "https://www.mathworks.com/products/matlab.html" },
   { node: <SiComsol size={60} color="#368CCB" />, title: "COMSOL", href: "https://www.comsol.com" },
   { node: <SiN8N size={60} color="#EA4B71" />, title: "n8n", href: "https://n8n.io" },
 ]
@@ -39,7 +39,7 @@ export function Skills() {
         viewport={{ once: true, margin: '-100px' }}
         className="w-full"
       >
-        <div className="relative w-full space-y-5 overflow-hidden py-3 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+        <div className="relative w-full space-y-8 overflow-hidden py-3 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
           {logoRows.map((row, rowIndex) => (
             <Marquee
               key={rowIndex}

@@ -35,13 +35,13 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full max-w-2xl rounded-xl border border-white/10 bg-cosmic-abyss/80 p-6 text-center shadow-glass backdrop-blur-xl"
+          className="w-full max-w-4xl rounded-xl border border-white/10 bg-cosmic-abyss/80 p-6 text-center shadow-glass backdrop-blur-xl"
         >
-          <p className="text-white/60">
+          <p className="text-white/60 whitespace-nowrap">
             I'm always open to discussing AI projects, research collaborations, or opportunities in AI engineering.
           </p>
 
-          <div className="mt-6 flex flex-col items-center gap-3">
+          <div className="mt-6 flex flex-col gap-3">
             {[
               { href: LINKS.email, label: 'Email', icon: Mail },
               { href: LINKS.github, label: 'GitHub', icon: Github },
@@ -54,7 +54,7 @@ export function Contact() {
                   href={item.href}
                   target={item.href.startsWith('http') ? '_blank' : undefined}
                   rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
-                  className="inline-flex items-center gap-2 rounded-lg bg-white/5 px-5 py-3 text-sm font-medium text-white ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-neon-cyan/50"
+                  className="inline-flex w-full justify-center items-center gap-2 rounded-lg bg-white/5 px-5 py-3 text-sm font-medium text-white ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-neon-cyan/50"
                 >
                   <Icon className="h-4 w-4 text-neon-cyan" />
                   {item.label}
@@ -65,7 +65,7 @@ export function Contact() {
               href={LINKS.x}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-white/5 px-5 py-3 text-sm font-medium text-white ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-neon-cyan/50"
+              className="inline-flex w-full justify-center items-center gap-2 rounded-lg bg-white/5 px-5 py-3 text-sm font-medium text-white ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-neon-cyan/50"
             >
               <SiX className="h-4 w-4 text-neon-cyan" />
               X
