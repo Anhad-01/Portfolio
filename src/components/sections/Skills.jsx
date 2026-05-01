@@ -5,23 +5,23 @@ import { SiGithub, SiDocker, SiArduino, SiPython, SiLangchain, SiTensorflow, SiS
 import { fadeUp } from '../../lib/motion.js'
 
 const techLogos = [
-  { node: <SiGithub size={40} color="#ffffff" />, title: "GitHub", href: "https://github.com" },
-  { node: <SiDocker size={40} color="#2496ED" />, title: "Docker", href: "https://docker.com" },
-  { node: <SiArduino size={40} color="#00979C" />, title: "Arduino", href: "https://arduino.cc" },
-  { node: <SiPython size={40} color="#3776AB" />, title: "Python", href: "https://python.org" },
-  { node: <SiLangchain size={40} color="#326CE5" />, title: "LangChain", href: "https://langchain.com" },
-  { node: <SiTensorflow size={40} color="#FF6F00" />, title: "TensorFlow", href: "https://tensorflow.org" },
-  { node: <SiScikitlearn size={40} color="#F7931E" />, title: "Scikit Learn", href: "https://scikit-learn.org" },
-  { node: <SiReact size={40} color="#61DAFB" />, title: "React", href: "https://react.dev" },
-  { node: <SiStreamlit size={40} color="#FF4B4B" />, title: "Streamlit", href: "https://streamlit.io" },
-  { node: <SiJupyter size={40} color="#F37626" />, title: "Jupyter", href: "https://jupyter.org" },
-  { node: <SiFastapi size={40} color="#009688" />, title: "FastAPI", href: "https://fastapi.tiangolo.com" },
-  { node: <SiCrewai size={40} color="#FF5A1F" />, title: "CrewAI", href: "https://www.crewai.com" },
-  { node: <SiPostgresql size={40} color="#4169E1" />, title: "PostgreSQL", href: "https://www.postgresql.org" },
-  { node: <SiMysql size={40} color="#4479A1" />, title: "MySQL", href: "https://www.mysql.com" },
+  { node: <SiGithub size={60} color="#ffffff" />, title: "GitHub", href: "https://github.com" },
+  { node: <SiDocker size={60} color="#2496Ed" />, title: "Docker", href: "https://docker.com" },
+  { node: <SiArduino size={60} color="#00979C" />, title: "Arduino", href: "https://arduino.cc" },
+  { node: <SiPython size={60} color="#3776AB" />, title: "Python", href: "https://python.org" },
+  { node: <SiLangchain size={60} color="#326CE5" />, title: "LangChain", href: "https://langchain.com" },
+  { node: <SiTensorflow size={60} color="#FF6F00" />, title: "TensorFlow", href: "https://tensorflow.org" },
+  { node: <SiScikitlearn size={60} color="#F7931E" />, title: "Scikit Learn", href: "https://scikit-learn.org" },
+  { node: <SiReact size={60} color="#61DAFB" />, title: "React", href: "https://react.dev" },
+  { node: <SiStreamlit size={60} color="#FF4B4B" />, title: "Streamlit", href: "https://streamlit.io" },
+  { node: <SiJupyter size={60} color="#F37626" />, title: "Jupyter", href: "https://jupyter.org" },
+  { node: <SiFastapi size={60} color="#009688" />, title: "FastAPI", href: "https://fastapi.tiangolo.com" },
+  { node: <SiCrewai size={60} color="#FF5A1F" />, title: "CrewAI", href: "https://www.crewai.com" },
+  { node: <SiPostgresql size={60} color="#4169E1" />, title: "PostgreSQL", href: "https://www.postgresql.org" },
+  { node: <SiMysql size={60} color="#4479A1" />, title: "MySQL", href: "https://www.mysql.com" },
   { node: <span className="text-sm font-bold tracking-normal text-[#FF8C00]">MATLAB</span>, title: "MATLAB", href: "https://www.mathworks.com/products/matlab.html" },
-  { node: <SiComsol size={40} color="#368CCB" />, title: "COMSOL", href: "https://www.comsol.com" },
-  { node: <SiN8N size={40} color="#EA4B71" />, title: "n8n", href: "https://n8n.io" },
+  { node: <SiComsol size={60} color="#368CCB" />, title: "COMSOL", href: "https://www.comsol.com" },
+  { node: <SiN8N size={60} color="#EA4B71" />, title: "n8n", href: "https://n8n.io" },
 ]
 
 const logoRows = [
@@ -50,15 +50,15 @@ export function Skills() {
               aria-label={`Tech stack logos row ${rowIndex + 1}`}
             >
               {row.map((logo) => (
-                <a
-                  key={logo.title}
-                  href={logo.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={logo.title}
-                  className="flex h-16 w-24 shrink-0 flex-col items-center justify-center gap-2 text-white/70 transition hover:-translate-y-1 hover:text-white"
-                >
-                  <span className="flex h-10 items-center justify-center">{logo.node}</span>
+                  <a
+                    key={logo.title}
+                    href={logo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={logo.title}
+                    className="flex h-24 w-24 shrink-0 flex-col items-center justify-center gap-2 text-white/70 transition hover:-translate-y-1 hover:text-white"
+                  >
+                  <span className="flex h-16 items-center justify-center">{logo.node}</span>
                   <span className="max-w-full px-1 text-center text-xs leading-tight">{logo.title}</span>
                 </a>
               ))}

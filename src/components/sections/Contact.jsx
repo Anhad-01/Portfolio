@@ -41,7 +41,7 @@ export function Contact() {
             I'm always open to discussing AI projects, research collaborations, or opportunities in AI engineering.
           </p>
 
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <div className="mt-6 flex flex-col items-center gap-3">
             {[
               { href: LINKS.email, label: 'Email', icon: Mail },
               { href: LINKS.github, label: 'GitHub', icon: Github },
