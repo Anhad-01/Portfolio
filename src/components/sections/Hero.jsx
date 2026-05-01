@@ -30,7 +30,7 @@ export function Hero() {
           pixelRatio={1}
         />
       </div>
-      <Container className="relative z-10 py-20 sm:py-32">
+      <Container className="relative z-10 py-24 sm:py-40">
         <motion.div
           variants={stagger(0.12, 0.06)}
           initial="hidden"
@@ -65,12 +65,29 @@ export function Hero() {
           </motion.div>
 
           {/* Description */}
-          <motion.p
+          {/* <motion.p
             variants={fadeUp}
             className="mt-6 max-w-xl text-white/60 whitespace-nowrap"
           >
             Building intelligent systems through Agentic AI, NLP,
             and innovative web technologies.
+          </motion.p> */}
+
+
+          {/* Description */}
+          <motion.p
+            variants={fadeUp}
+            className="mt-6 max-w-xl text-white/60 space-y-2 list-disc list-inside"
+          >
+            <li>
+              Passionate about Artificial Intelligence, Machine Learning, Computer Vision, and NLP.
+            </li>
+            <li>
+              Experienced in deep learning pipelines, semantic search, image segmentation, IoT, and Agentic AI systems.
+            </li>
+            <li>
+              Always excited to collaborate on projects that apply AI to real-world challenges and push the boundaries of research.
+            </li>
           </motion.p>
 
           {/* CTA Buttons */}
