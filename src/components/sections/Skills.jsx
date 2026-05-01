@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Section } from '../ui/Section.jsx'
-import LogoLoop from '../ui/LogoLoop.jsx'
-import { SiGithub, SiDocker, SiArduino, SiPython, SiLangchain, SiTensorflow, SiScikitlearn, SiReact, SiStreamlit, SiJupyter } from 'react-icons/si'
+import { Marquee } from '../ui/Marquee.jsx'
+import { SiGithub, SiDocker, SiArduino, SiPython, SiLangchain, SiTensorflow, SiScikitlearn, SiReact, SiStreamlit, SiJupyter, SiFastapi, SiCrewai, SiPostgresql, SiMysql, SiComsol, SiN8N } from 'react-icons/si'
 import { fadeUp } from '../../lib/motion.js'
 
 const techLogos = [
@@ -15,6 +15,13 @@ const techLogos = [
   { node: <SiReact size={40} color="#61DAFB" />, title: "React", href: "https://react.dev" },
   { node: <SiStreamlit size={40} color="#FF4B4B" />, title: "Streamlit", href: "https://streamlit.io" },
   { node: <SiJupyter size={40} color="#F37626" />, title: "Jupyter", href: "https://jupyter.org" },
+  { node: <SiFastapi size={40} color="#009688" />, title: "FastAPI", href: "https://fastapi.tiangolo.com" },
+  { node: <SiCrewai size={40} color="#FF5A1F" />, title: "CrewAI", href: "https://www.crewai.com" },
+  { node: <SiPostgresql size={40} color="#4169E1" />, title: "PostgreSQL", href: "https://www.postgresql.org" },
+  { node: <SiMysql size={40} color="#4479A1" />, title: "MySQL", href: "https://www.mysql.com" },
+  { node: <span className="text-sm font-bold tracking-normal text-[#FF8C00]">MATLAB</span>, title: "MATLAB", href: "https://www.mathworks.com/products/matlab.html" },
+  { node: <SiComsol size={40} color="#368CCB" />, title: "COMSOL", href: "https://www.comsol.com" },
+  { node: <SiN8N size={40} color="#EA4B71" />, title: "n8n", href: "https://n8n.io" },
 ]
 
 export function Skills() {
@@ -27,18 +34,22 @@ export function Skills() {
         viewport={{ once: true, margin: '-100px' }}
         className="w-full"
       >
-        <div className="w-full overflow-hidden">
-          <LogoLoop
-            logos={techLogos}
-            speed={40}
-            direction="left"
-            logoHeight={56}
-            gap={70}
-            scaleOnHover={true}
-            fadeOut={true}
-            fadeOutColor="#07111F"
-            ariaLabel="Tech stack logos"
-          />
+        <div className="relative w-full overflow-hidden py-3 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+          <Marquee pauseOnHover duration="34s" className="[--gap:3rem]" aria-label="Tech stack logos">
+            {techLogos.map((logo) => (
+              <a
+                key={logo.title}
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={logo.title}
+                className="flex h-20 w-24 shrink-0 flex-col items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] text-white/70 transition hover:-translate-y-1 hover:border-neon-cyan/50 hover:bg-white/[0.06] hover:text-white"
+              >
+                <span className="flex h-10 items-center justify-center">{logo.node}</span>
+                <span className="max-w-full px-1 text-center text-xs leading-tight">{logo.title}</span>
+              </a>
+            ))}
+          </Marquee>
         </div>
       </motion.div>
     </Section>

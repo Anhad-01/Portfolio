@@ -1,15 +1,23 @@
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { Briefcase, ChevronRight } from 'lucide-react'
-import { Container } from '../ui/Container.jsx'
 import { Section } from '../ui/Section.jsx'
 import { StarBorder } from '../ui/StarBorder.jsx'
 import { EXPERIENCE } from '../../data/content.js'
 import { fadeUp, stagger } from '../../lib/motion.js'
 
 export function Experience() {
+  const containerRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start 70%', 'end 35%'],
+  })
+  const height = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
+
   return (
     <Section id="experience" title="Work History">
       <motion.div
+        ref={containerRef}
         variants={stagger(0.15)}
         initial="hidden"
         whileInView="show"
@@ -17,7 +25,12 @@ export function Experience() {
         className="relative"
       >
         {/* Timeline line */}
-        <div className="absolute left-[7px] top-0 bottom-0 w-px bg-gradient-to-b from-neon-violet via-neon-cyan to-neon-magenta" />
+        <div className="absolute left-[7px] top-0 bottom-0 w-px overflow-hidden bg-white/10">
+          <motion.div
+            style={{ height }}
+            className="w-full rounded-full bg-gradient-to-b from-neon-violet via-neon-cyan to-neon-magenta shadow-glow-cyan"
+          />
+        </div>
 
         <div className="space-y-8">
           {EXPERIENCE.map((exp, index) => (
