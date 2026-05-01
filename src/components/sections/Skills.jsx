@@ -24,6 +24,11 @@ const techLogos = [
   { node: <SiN8N size={40} color="#EA4B71" />, title: "n8n", href: "https://n8n.io" },
 ]
 
+const logoRows = [
+  techLogos.slice(0, Math.ceil(techLogos.length / 2)),
+  techLogos.slice(Math.ceil(techLogos.length / 2)),
+]
+
 export function Skills() {
   return (
     <Section id="skills" title="Skills">
@@ -34,22 +39,31 @@ export function Skills() {
         viewport={{ once: true, margin: '-100px' }}
         className="w-full"
       >
-        <div className="relative w-full overflow-hidden py-3 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
-          <Marquee pauseOnHover duration="34s" className="[--gap:3rem]" aria-label="Tech stack logos">
-            {techLogos.map((logo) => (
-              <a
-                key={logo.title}
-                href={logo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={logo.title}
-                className="flex h-20 w-24 shrink-0 flex-col items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] text-white/70 transition hover:-translate-y-1 hover:border-neon-cyan/50 hover:bg-white/[0.06] hover:text-white"
-              >
-                <span className="flex h-10 items-center justify-center">{logo.node}</span>
-                <span className="max-w-full px-1 text-center text-xs leading-tight">{logo.title}</span>
-              </a>
-            ))}
-          </Marquee>
+        <div className="relative w-full space-y-5 overflow-hidden py-3 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+          {logoRows.map((row, rowIndex) => (
+            <Marquee
+              key={rowIndex}
+              pauseOnHover
+              reverse={rowIndex === 1}
+              duration={rowIndex === 0 ? '48s' : '54s'}
+              className="[--gap:3.25rem]"
+              aria-label={`Tech stack logos row ${rowIndex + 1}`}
+            >
+              {row.map((logo) => (
+                <a
+                  key={logo.title}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={logo.title}
+                  className="flex h-16 w-24 shrink-0 flex-col items-center justify-center gap-2 text-white/70 transition hover:-translate-y-1 hover:text-white"
+                >
+                  <span className="flex h-10 items-center justify-center">{logo.node}</span>
+                  <span className="max-w-full px-1 text-center text-xs leading-tight">{logo.title}</span>
+                </a>
+              ))}
+            </Marquee>
+          ))}
         </div>
       </motion.div>
     </Section>

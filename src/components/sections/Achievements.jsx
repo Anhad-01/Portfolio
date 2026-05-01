@@ -50,10 +50,10 @@ export function Achievements() {
             {orderedAchievements.map((achievement, index) => (
               <article
                 key={achievement.title}
-                className={`relative flex min-h-[24rem] shrink-0 flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-cosmic-abyss text-left shadow-glass transition-all duration-500 ${
+                className={`relative flex min-h-[22rem] shrink-0 flex-col justify-end overflow-hidden rounded-xl border border-white/10 bg-cosmic-abyss text-left shadow-glass transition-all duration-500 ${
                   index === 0
-                    ? 'w-[82%] md:w-[48%] opacity-100'
-                    : 'w-[72%] md:w-[32%] opacity-55'
+                    ? 'w-[72%] opacity-100'
+                    : 'w-[48%] opacity-55'
                 }`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/15 via-white/[0.04] to-neon-violet/10" />

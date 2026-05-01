@@ -2,6 +2,7 @@ export const LINKS = {
   email: 'mailto:anhad01mehrotra@gmail.com',
   linkedin: 'https://www.linkedin.com/in/anhad-mehrotra',
   github: 'https://github.com/Anhad-01',
+  x: 'https://x.com/AnhadMehrotra',
   resume: '/Anhad_Mehrotra_Resume.pdf',
 }
 

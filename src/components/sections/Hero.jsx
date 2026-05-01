@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { MapPin, Download } from 'lucide-react'
+import { Mail, MapPin, Download } from 'lucide-react'
 import { Container } from '../ui/Container.jsx'
 import { TypewriterEffect } from '../effects/TypewriterEffect.jsx'
 import { FloatingTechIcons } from '../effects/FloatingTechIcons.jsx'
@@ -35,7 +35,22 @@ export function Hero() {
           variants={stagger(0.12, 0.06)}
           initial="hidden"
           animate="show"
+          className="relative"
         >
+          <motion.div
+            variants={fadeUp}
+            className="pointer-events-none absolute right-0 top-10 hidden lg:block"
+          >
+            <div className="relative h-72 w-72 rounded-full border border-white/15 bg-white/[0.04] p-2 shadow-glass">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-neon-cyan/25 via-transparent to-neon-violet/25 blur-xl" />
+              <img
+                src="/images/profile/profile.jpg"
+                alt="Anhad Mehrotra"
+                className="relative h-full w-full rounded-full object-cover object-center"
+              />
+            </div>
+          </motion.div>
+
           {/* Location badge */}
           <motion.div variants={fadeUp}>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/6 px-3 py-1.5 text-xs text-white/75 ring-1 ring-white/12 backdrop-blur-xl">
@@ -75,20 +90,21 @@ export function Hero() {
 
 
           {/* Description */}
-          <motion.p
+          <motion.div
             variants={fadeUp}
-            className="mt-6 max-w-xl text-white/60 space-y-2 list-disc list-inside"
+            className="mt-6 max-w-xl space-y-2 text-white/65"
           >
-            <li>
-              Passionate about Artificial Intelligence, Machine Learning, Computer Vision, and NLP.
-            </li>
-            <li>
-              Experienced in deep learning pipelines, semantic search, image segmentation, IoT, and Agentic AI systems.
-            </li>
-            <li>
-              Always excited to collaborate on projects that apply AI to real-world challenges and push the boundaries of research.
-            </li>
-          </motion.p>
+            {[
+              'Passionate about Artificial Intelligence, Machine Learning, Computer Vision, and NLP.',
+              'Experienced in deep learning pipelines, semantic search, image segmentation, IoT, and Agentic AI systems.',
+              'Always excited to collaborate on projects that apply AI to real-world challenges and push the boundaries of research.',
+            ].map((line) => (
+              <p key={line} className="flex gap-3 leading-7">
+                <span className="mt-0.5 shrink-0 text-neon-cyan">&gt;</span>
+                <span>{line}</span>
+              </p>
+            ))}
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
@@ -104,6 +120,15 @@ export function Hero() {
             >
               <Download className="h-4 w-4" />
               Download Resume
+            </motion.a>
+            <motion.a
+              href={LINKS.email}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-2 rounded-lg bg-neon-cyan px-6 py-3 text-sm font-semibold text-cosmic-void transition-all hover:bg-white"
+            >
+              <Mail className="h-4 w-4" />
+              Contact Me
             </motion.a>
           </motion.div>
 

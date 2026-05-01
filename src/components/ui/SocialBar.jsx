@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail } from 'lucide-react'
+import { SiX } from 'react-icons/si'
 import { LINKS } from '../../data/content.js'
 
 export function SocialBar() {
@@ -34,6 +35,15 @@ export function SocialBar() {
         className="rounded-full bg-white/5 p-3 text-white/60 transition-colors hover:bg-white/10 hover:text-neon-violet"
       >
         <Mail className="h-5 w-5" />
+      </motion.a>
+      <motion.a
+        href={LINKS.x}
+        target="_blank"
+        rel="noreferrer"
+        whileHover={{ scale: 1.1, x: -4 }}
+        className="rounded-full bg-white/5 p-3 text-white/60 transition-colors hover:bg-white/10 hover:text-white"
+      >
+        <SiX className="h-5 w-5" />
       </motion.a>
     </motion.div>
   )

@@ -8,10 +8,10 @@ import { BLOGPOSTS } from '../../data/content.js'
 export function Blog() {
   return (
     <Section id="blog" title="Recent Blogs">
-      <div className="relative w-full max-w-4xl mx-auto h-[500px] mt-10">
-        <CardSwap width={500} height={350} pauseOnHover={true}>
+      <div className="relative w-full max-w-5xl mx-auto h-[500px] mt-10">
+        <CardSwap width={560} height={350} pauseOnHover={true}>
           {BLOGPOSTS.map((post, i) => (
-            <Card key={i} className="p-5 h-[280px] flex flex-col w-full bg-[#161b22] border-white/10 shadow-xl overflow-hidden">
+            <Card key={i} className="p-5 h-[290px] flex flex-col w-full bg-cosmic-abyss border-white/10 shadow-glass overflow-hidden">
               <div className="flex-shrink-0">
                 <div className="flex items-center gap-2 text-white/40 mb-1">
                   <PenLine className="h-3.5 w-3.5" />
