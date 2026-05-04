@@ -16,7 +16,7 @@ import { SocialBar } from './components/ui/SocialBar.jsx'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-cosmic-void text-white">
+    <div className="min-h-screen bg-cosmic-void text-white overflow-x-hidden">
       <CosmicBackground />
       <ScrollProgress />
       <Navigation />

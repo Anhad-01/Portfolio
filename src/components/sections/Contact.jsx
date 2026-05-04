@@ -37,7 +37,7 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-4xl rounded-xl border border-white/10 bg-cosmic-abyss/80 p-6 text-center shadow-glass backdrop-blur-xl"
         >
-          <p className="text-white/60 whitespace-nowrap">
+          <p className="text-white/60">
             I'm always open to discussing AI projects, research collaborations, or opportunities in AI engineering.
           </p>
 

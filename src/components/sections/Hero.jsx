@@ -64,9 +64,9 @@ export function Hero() {
           {/* Name with gradient */}
           <motion.h1
             variants={fadeUp}
-            className="mt-8 text-5xl font-bold tracking-tight sm:text-7xl"
+            className="mt-8 text-4xl font-bold tracking-tight sm:text-7xl"
           >
-            <span className="bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent">
               Anhad Mehrotra
             </span>
           </motion.h1>
