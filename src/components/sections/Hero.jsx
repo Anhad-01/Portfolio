@@ -39,12 +39,12 @@ export function Hero() {
         >
           <motion.div
             variants={fadeUp}
-            className="pointer-events-none absolute right-45 top-22 hidden lg:block"
+            className="pointer-events-none absolute right-60 top-3 hidden lg:block"
           >
-            <div className="relative h-72 w-72 rounded-full overflow-hidden shadow-glass">
+            <div className="relative h-55 w-55 rounded-full overflow-hidden shadow-glass">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-neon-cyan/25 via-transparent to-neon-violet/25 blur-xl" />
               <img
-                src="/images/profile/profile3.png"
+                src="/images/profile/profile_new3.png"
                 alt="Anhad Mehrotra"
                 className="relative h-full w-full object-cover object-center"
               />

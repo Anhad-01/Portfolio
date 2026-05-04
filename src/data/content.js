@@ -83,6 +83,18 @@ export const EXPERIENCE = [
 export const PROJECTS = [
   {
     type: 'Project',
+    title: 'Vision-Language Fusion for Image Captioning',
+    desc: 'Developed a hybrid image captioning pipeline combining YOLOv5, Swin Transformer, and Mask R-CNN with enhanced WBF.',
+    highlights: [],
+    link: {
+      label: 'GitHub',
+      href: 'https://github.com/Anhad-01/Vision-Language-Fusion-for-Advanced-Image-Captioning',
+    },
+    tags: [],
+    image: '/images/projects/vision.png',
+  },
+  {
+    type: 'Project',
     title: 'LLM-based Opinion Dynamics Simulation',
     desc: 'Multi-agent simulation framework to study opinion dynamics in social systems.',
     highlights: [],
@@ -107,20 +119,8 @@ export const PROJECTS = [
   },
   {
     type: 'Project',
-    title: 'Vision-Language Fusion for Image Captioning',
-    desc: 'Developed a hybrid image captioning pipeline combining YOLOv5, Swin Transformer, and Mask R-CNN with enhanced WBF.',
-    highlights: [],
-    link: {
-      label: 'GitHub',
-      href: 'https://github.com/Anhad-01/Vision-Language-Fusion-for-Advanced-Image-Captioning',
-    },
-    tags: [],
-    image: '/images/projects/vision.png',
-  },
-  {
-    type: 'Project',
     title: 'Semantic Searching for Government Schemes',
-    desc: 'Built a multilingual semantic search system for efficient discovery of government schemes using natural language queries.',
+    desc: 'A multilingual semantic search system for efficient discovery of government schemes using natural language queries.',
     highlights: [],
     link: {
       label: 'GitHub',
@@ -132,7 +132,7 @@ export const PROJECTS = [
   {
     type: 'Project',
     title: 'IoT-based Air & Sound Monitoring and Forecasting',
-    desc: 'Developed an ESP32-based system to collect and forecast environmental data.',
+    desc: 'An ESP32-based system to collect and forecast environmental data.',
     highlights: [],
     link: {
       label: 'GitHub',
@@ -144,7 +144,7 @@ export const PROJECTS = [
   {
     type: 'Project',
     title: 'Chrome Extension for Spell and Grammar Checking',
-    desc: 'Developed a chrome extension for real-time spell and grammar correction.',
+    desc: 'A chrome extension for real-time spell and grammar correction.',
     highlights: [],
     link: {
       label: 'GitHub',
@@ -152,6 +152,18 @@ export const PROJECTS = [
     },
     tags: [],
     image: '/images/projects/chrome.svg',
+  },
+  {
+    type: 'Project',
+    title: 'Upwork Scraping Automation using n8n',
+    desc: 'An n8n automation worflow for scraping jobs, ranking them, and storing results in Airtable.',
+    highlights: [],
+    link: {
+      label: 'GitHub',
+      href: 'https://github.com/Anhad-01/Upwork-Scraping-Automation-using-n8n',
+    },
+    tags: [],
+    image: '/images/projects/upwork.png',
   }
 ]
 
