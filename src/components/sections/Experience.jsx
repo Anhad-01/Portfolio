@@ -4,7 +4,7 @@ import { Briefcase, ChevronRight } from 'lucide-react'
 import { Section } from '../ui/Section.jsx'
 import { StarBorder } from '../ui/StarBorder.jsx'
 import { EXPERIENCE } from '../../data/content.js'
-import { fadeUp, stagger } from '../../lib/motion.js'
+import { fadeUp, fadeRight, stagger } from '../../lib/motion.js'
 
 export function Experience() {
   const containerRef = useRef(null)
@@ -34,7 +34,7 @@ export function Experience() {
 
         <div className="space-y-8">
           {EXPERIENCE.map((exp, index) => (
-            <motion.div key={`${exp.org}-${index}`} variants={fadeUp} className="relative pl-8">
+            <motion.div key={`${exp.org}-${index}`} variants={fadeRight} className="relative pl-8">
               {/* Timeline dot */}
               <div className="absolute left-0 top-2 h-4 w-4 rounded-full bg-cosmic-abyss ring-2 ring-neon-cyan shadow-glow-cyan" />
 

@@ -3,7 +3,7 @@ import { GraduationCap, Award, BookOpen } from 'lucide-react'
 import { Container } from '../ui/Container.jsx'
 import { Section } from '../ui/Section.jsx'
 import { SpotlightCard } from '../ui/SpotlightCard.jsx'
-import { fadeUp, stagger } from '../../lib/motion.js'
+import { fadeUp, fadeLeft, fadeRight, stagger } from '../../lib/motion.js'
 
 export function About() {
   return (
@@ -16,7 +16,7 @@ export function About() {
         className="grid gap-6 md:grid-cols-2"
       >
         {/* Education Card */}
-        <motion.div variants={fadeUp}>
+        <motion.div variants={fadeLeft}>
           <SpotlightCard glowColor="cyan" className="p-6 h-full" disableHover>
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-neon-cyan/20 p-3">
@@ -42,7 +42,7 @@ export function About() {
         </motion.div>
 
         {/* Quick Facts Card */}
-        <motion.div variants={fadeUp}>
+        <motion.div variants={fadeRight}>
           <SpotlightCard glowColor="cyan" className="p-6 h-full" disableHover>
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-neon-cyan/20 p-3">

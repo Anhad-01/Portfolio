@@ -4,7 +4,7 @@ import { Container } from '../ui/Container.jsx'
 import { TypewriterEffect } from '../effects/TypewriterEffect.jsx'
 import { FloatingTechIcons } from '../effects/FloatingTechIcons.jsx'
 import { LINKS } from '../../data/content.js'
-import { fadeUp, stagger } from '../../lib/motion.js'
+import { fadeUp, fadeLeft, stagger } from '../../lib/motion.js'
 import Particles from '../effects/Particles.jsx'
 
 const TYPED_WORDS = [
@@ -44,7 +44,7 @@ export function Hero() {
             <div className="relative h-55 w-55 rounded-full overflow-hidden shadow-glass">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-neon-cyan/25 via-transparent to-neon-violet/25 blur-xl" />
               <img
-                src="/images/profile/profile_new3.png"
+                src="/images/profile/profile5.png"
                 alt="Anhad Mehrotra"
                 className="relative h-full w-full object-cover object-center"
               />
@@ -91,7 +91,7 @@ export function Hero() {
 
           {/* Description */}
           <motion.div
-            variants={fadeUp}
+            variants={fadeLeft}
             className="mt-6 max-w-xl space-y-2 text-white/65"
           >
             {[
@@ -108,7 +108,7 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <motion.div
-            variants={fadeUp}
+            variants={fadeLeft}
             className="mt-10 flex flex-wrap gap-4"
           >
             <motion.a

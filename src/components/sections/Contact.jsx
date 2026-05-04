@@ -31,8 +31,8 @@ export function Contact() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -30, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="w-full max-w-4xl rounded-xl border border-white/10 bg-cosmic-abyss/80 p-6 text-center shadow-glass backdrop-blur-xl"
