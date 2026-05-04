@@ -19,7 +19,7 @@ const techLogos = [
   { node: <SiCrewai size={60} color="#FF5A1F" />, title: "CrewAI", href: "https://www.crewai.com" },
   { node: <SiPostgresql size={60} color="#4169E1" />, title: "PostgreSQL", href: "https://www.postgresql.org" },
   { node: <SiMysql size={60} color="#4479A1" />, title: "MySQL", href: "https://www.mysql.com" },
-  { node: <SiOctave size={60} color="#FF8C00" />, title: "MATLAB", href: "https://www.mathworks.com/products/matlab.html" },
+  { node: <img src="/images/skills/MATLAB.svg" alt="MATLAB" className="h-14 w-14 object-contain" />, title: "MATLAB", href: "https://www.mathworks.com/products/matlab.html" },
   { node: <SiComsol size={60} color="#368CCB" />, title: "COMSOL", href: "https://www.comsol.com" },
   { node: <SiN8N size={60} color="#EA4B71" />, title: "n8n", href: "https://n8n.io" },
 ]
@@ -45,7 +45,7 @@ export function Skills() {
               key={rowIndex}
               pauseOnHover
               reverse={rowIndex === 1}
-              duration={rowIndex === 0 ? '48s' : '54s'}
+              duration="40s"
               className="[--gap:3.25rem]"
               aria-label={`Tech stack logos row ${rowIndex + 1}`}
             >

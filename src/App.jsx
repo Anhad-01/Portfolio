@@ -42,6 +42,7 @@ export default function App() {
             <Projects />
             <Achievements />
             <Blog />
+            <div className="relative py-6 sm:py-12" />
             <Contact />
             <Footer />
           </div>

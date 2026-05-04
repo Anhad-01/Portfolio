@@ -15,7 +15,7 @@ const TYPED_WORDS = [
 
 export function Hero() {
   return (
-    <header className="relative min-h-screen overflow-hidden">
+    <header className="relative overflow-hidden">
       {/* Particles background */}
       <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }}>
         <Particles
@@ -30,7 +30,7 @@ export function Hero() {
           pixelRatio={1}
         />
       </div>
-      <Container className="relative z-10 py-24 sm:py-40">
+      <Container className="relative z-10 pt-24 sm:pt-40 pb-8 sm:pb-14">
         <motion.div
           variants={stagger(0.12, 0.06)}
           initial="hidden"
@@ -44,7 +44,7 @@ export function Hero() {
             <div className="relative h-55 w-55 rounded-full overflow-hidden shadow-glass">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-neon-cyan/25 via-transparent to-neon-violet/25 blur-xl" />
               <img
-                src="/images/profile/profile5.png"
+                src="/images/profile/profile_new_bg.png"
                 alt="Anhad Mehrotra"
                 className="relative h-full w-full object-cover object-center"
               />
