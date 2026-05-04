@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { GraduationCap, Award, BookOpen } from 'lucide-react'
 import { Container } from '../ui/Container.jsx'
 import { Section } from '../ui/Section.jsx'
-import { SpotlightCard } from '../ui/SpotlightCard.jsx'
+import { StarBorder } from '../ui/StarBorder.jsx'
 import { fadeUp, fadeLeft, fadeRight, stagger } from '../../lib/motion.js'
 
 export function About() {
@@ -17,7 +17,7 @@ export function About() {
       >
         {/* Education Card */}
         <motion.div variants={fadeLeft}>
-          <SpotlightCard glowColor="cyan" className="p-6 h-full" disableHover>
+          <StarBorder as="div" color="#06b6d4" className="w-full h-full" contentClassName="p-6 h-full text-left">
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-neon-cyan/20 p-3">
                 <GraduationCap className="h-6 w-6 text-neon-cyan" />
@@ -38,12 +38,12 @@ export function About() {
                 </div>
               </div>
             </div>
-          </SpotlightCard>
+          </StarBorder>
         </motion.div>
 
         {/* Quick Facts Card */}
         <motion.div variants={fadeRight}>
-          <SpotlightCard glowColor="cyan" className="p-6 h-full" disableHover>
+          <StarBorder as="div" color="#06b6d4" className="w-full h-full" contentClassName="p-6 h-full text-left">
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-neon-cyan/20 p-3">
                 <Award className="h-6 w-6 text-neon-cyan" />
@@ -66,12 +66,12 @@ export function About() {
                 </ul>
               </div>
             </div>
-          </SpotlightCard>
+          </StarBorder>
         </motion.div>
 
-        {/* Focus Areas */}
+                {/* Focus Areas */}
         <motion.div variants={fadeUp} className="md:col-span-2">
-          <SpotlightCard glowColor="cyan" className="p-6" disableHover>
+          <StarBorder as="div" color="#06b6d4" className="w-full" contentClassName="p-6 text-left">
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-neon-cyan/20 p-3">
                 <BookOpen className="h-6 w-6 text-neon-cyan" />
@@ -96,7 +96,7 @@ export function About() {
                 </div>
               </div>
             </div>
-          </SpotlightCard>
+          </StarBorder>
         </motion.div>
       </motion.div>
     </Section>

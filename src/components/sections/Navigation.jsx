@@ -30,18 +30,18 @@ export function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
-      
+
       // If at the very top (hero section), show "About"
       if (scrollY < 100) {
         setActiveSection('about')
         return
       }
-      
+
       const sectionIds = navItems.map(item => item.id).filter(id => id !== 'about')
-      
+
       let currentSection = 'education'
       let minDistance = Infinity
-      
+
       sectionIds.forEach((id) => {
         const element = document.getElementById(id)
         if (element) {
@@ -53,10 +53,10 @@ export function Navigation() {
           }
         }
       })
-      
+
       setActiveSection(currentSection)
     }
-    
+
     window.addEventListener('scroll', handleScroll)
     handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
@@ -89,9 +89,13 @@ export function Navigation() {
             <motion.button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               whileHover={{ scale: 1.05 }}
-              className="text-lg font-bold bg-gradient-to-r from-neon-violet to-neon-cyan bg-clip-text text-transparent"
+              className="flex items-center"
             >
-              AM
+              <img
+                src="/images/logo_plain2new.png"
+                alt="Anhad Mehrotra Logo"
+                className="h-10 w-auto"
+              />
             </motion.button>
 
             {/* Desktop Nav */}

@@ -38,7 +38,7 @@ export function Experience() {
               {/* Timeline dot */}
               <div className="absolute left-0 top-2 h-4 w-4 rounded-full bg-cosmic-abyss ring-2 ring-neon-cyan shadow-glow-cyan" />
 
-              <StarBorder as="div" color="#06b6d4" className="w-full">
+              <StarBorder as="div" color="#06b6d4" className="w-full" contentClassName="p-4 px-6 text-left">
                 <div className="flex items-start justify-between gap-4 flex-wrap text-left">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">

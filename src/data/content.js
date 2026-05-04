@@ -84,7 +84,7 @@ export const PROJECTS = [
   {
     type: 'Project',
     title: 'Vision-Language Fusion for Image Captioning',
-    desc: 'Developed a hybrid image captioning pipeline combining YOLOv5, Swin Transformer, and Mask R-CNN with enhanced WBF.',
+    desc: 'A hybrid image captioning pipeline combining YOLOv5, Swin Transformer, and Mask R-CNN with enhanced WBF.',
     highlights: [],
     link: {
       label: 'GitHub',
