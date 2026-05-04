@@ -74,9 +74,15 @@ html {
 }
 
 .animate-marquee {
-  animation: marquee var(--duration) linear infinite;
+  animation-name: marquee;
+  animation-duration: var(--duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .animate-marquee-vertical {
-  animation: marquee-vertical var(--duration) linear infinite;
+  animation-name: marquee-vertical;
+  animation-duration: var(--duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
