@@ -12,6 +12,7 @@ export function Achievements() {
     type: achievement.type,
     time: achievement.time,
     link: achievement.link,
+    image: achievement.image,
     icon: achievement.type === 'Publication' ? (
       <BookOpen className="h-5 w-5 text-neon-cyan" />
     ) : (
@@ -22,12 +23,20 @@ export function Achievements() {
   const renderItem = (item) => (
     <div className="relative flex flex-col justify-end w-full h-full min-h-[22rem] p-5">
       <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/15 via-white/[0.04] to-neon-violet/10" />
-      <div className="absolute inset-x-5 top-5 h-40 rounded-xl border border-dashed border-white/15 bg-cosmic-void/70">
-        <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.24em] text-white/30">
-          Image
-        </div>
+      <div className="absolute inset-x-5 top-5 h-55 rounded-xl overflow-hidden border border-white/10 bg-cosmic-void/70">
+        {item.image ? (
+          <img
+            src={item.image}
+            alt={item.title}
+            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.24em] text-white/30">
+            Image
+          </div>
+        )}
       </div>
-      <div className="relative z-10 pt-52">
+      <div className="relative z-10 pt-60">
         <div className="mb-4 flex items-center gap-3">
           <div className="rounded-lg bg-neon-cyan/20 p-3 shrink-0">
             {item.icon}

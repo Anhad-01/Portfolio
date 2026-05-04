@@ -46,7 +46,7 @@ export const EXPERIENCE = [
     role: 'AI Engineer Intern',
     org: 'Edxso',
     website: 'https://www.edxso.com/',
-    roleLink: 'https://drive.google.com/file/d/1FDsbMd-QsFw6Onk3h36tNDSFjjXluLcs/view?usp=drive_link',
+    roleLink: 'https://drive.google.com/file/d/1mlvNrzEwaHGTrgHJbtzpaUPzVGzACVwC/view?usp=sharing',
     time: 'Feb – Apr 2026',
     bullets: [
       'Developed an AI-powered educational assessment platform with RBAC to evaluate question papers against the National Curriculum Framework.',
@@ -177,6 +177,7 @@ export const ACHIEVEMENTS = [
       label: 'DOI: 10.1016/j.cryobiol.2026.105619',
       href: 'https://doi.org/10.1016/j.cryobiol.2026.105619',
     },
+    image: '/images/achievements/cryoprobe3.png',
   },
   {
     type: 'Hackathon',
@@ -187,6 +188,7 @@ export const ACHIEVEMENTS = [
       label: 'Battery Analytics Platform (GitHub)',
       href: 'https://github.com/Anhad-01/Digital-Twin-for-Battery-Ageing-Prediction',
     },
+    image: '/images/achievements/tata2.png',
   },
   {
     type: 'Hackathon',
@@ -197,6 +199,7 @@ export const ACHIEVEMENTS = [
       label: 'NIC Code Semantic Search (GitHub)',
       href: 'https://github.com/Anhad-01/semantic-search-nic.git',
     },
+    image: '/images/achievements/hack_the_future.jpeg',
   },
 ]
 
