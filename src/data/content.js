@@ -205,6 +205,18 @@ export const ACHIEVEMENTS = [
 
 export const BLOGPOSTS = [
   {
+    title: 'Skills Got You the Interview. Now What?',
+    excerpt: 'Your skills get you in the room. Your character gets you the job.',
+    date: '2026-05-04',
+    slug: 'skills-got-you-the-interview',
+    image: '/images/blogs/interview.png',
+    link: {
+      label: 'Read more',
+      href: '/blogs/skills-got-you-the-interview',
+    },
+    tags: [],
+  },
+  {
     title: 'From Vibe Coder to Developer: How to Actually Use Coding Agents',
     excerpt: 'Because "just vibe with it" stops working the moment your app hits production.',
     date: '2026-04-28',
