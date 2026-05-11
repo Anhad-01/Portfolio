@@ -10,7 +10,7 @@ import Particles from '../effects/Particles.jsx'
 const TYPED_WORDS = [
   'Agentic AI Expert',
   'Automations Specialist',
-  'Full-Stack Developer',
+  // 'Full-Stack Developer',
 ]
 
 export function Hero() {
