@@ -181,6 +181,17 @@ export const ACHIEVEMENTS = [
   },
   {
     type: 'Hackathon',
+    title: 'BioMed Bharat Hackathon 2026',
+    time: 'Sep 2026',
+    desc: 'Presented a complete solution with hospital data integration, trend recognition on patient vitals, and a pocket sized hardware to alert clinicians for critical cases. Won from over 220 teams pan India.',
+    link: {
+      label: 'Longitudnal Clinical Intelligence Investigation System (LCIIS)',
+      href: 'https://lciis-model-1.onrender.com/#/login',
+    },
+    image: '/images/achievements/biomed.jpeg',
+  },
+  {
+    type: 'Hackathon',
     title: 'TATA Technologies InnoVent Hackathon',
     time: 'Aug 2025',
     desc: 'Developed an AI-driven battery analytics solution for health monitoring, performance prediction and lifecycle management in EVs .Ranked top 31 out of 2,800+ teams.',
