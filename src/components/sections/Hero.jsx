@@ -95,9 +95,9 @@ export function Hero() {
             className="mt-6 max-w-xl space-y-2 text-white/65"
           >
             {[
-              'Passionate about Artificial Intelligence, Machine Learning, Computer Vision, and NLP.',
-              'Experienced in deep learning pipelines, semantic search, image segmentation, IoT, and Agentic AI systems.',
-              'Always excited to collaborate on projects that apply AI to real-world challenges and push the boundaries of research.',
+              'Experienced in building Agentic AI systems, LLM-powered applications, RAG pipelines, semantic search, and ML solutions.',
+              'Interested in AI Engineering, Generative AI, Multi-Agent Systems, Deep Learning, and applied AI research.',
+              'Keen to develop scalable, reliable AI solutions that solve real-world problems, from intelligent automation to predictive modeling.',
             ].map((line) => (
               <p key={line} className="flex gap-3 leading-7">
                 <span className="mt-0.5 shrink-0 text-neon-cyan">&gt;</span>

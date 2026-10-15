@@ -49,9 +49,9 @@ export const EXPERIENCE = [
     roleLink: 'https://drive.google.com/file/d/1mlvNrzEwaHGTrgHJbtzpaUPzVGzACVwC/view?usp=sharing',
     time: 'Feb – Apr 2026',
     bullets: [
-      'Developed an AI-powered educational assessment platform with RBAC to evaluate question papers against the National Curriculum Framework.',
-      'Built and deployed a generative AI application for automated creation of product marketing visuals, supporting single and batch processing workflows.',
-      'Contributed to the development of a scalable question bank system that evaluates user-submitted questions against defined competencies',
+      'Built an AI assessment platform (Gemini API, Docker) that evaluates question papers against NCF competency frameworks and generates alignment reports, with role-based access control.',
+      'Developed and deployed a GenAI pipeline on DigitalOcean for automated product visual creation supporting single and batch workflows.',
+      'Contributed to a scalable question bank system scoring submissions against defined competencies with a reward mechanism to incentivize quality contributions.',
     ],
   },
   {
@@ -59,11 +59,11 @@ export const EXPERIENCE = [
     org: 'National e-Governance Division, Ministry of Electronics & IT',
     website: 'https://negd.gov.in/',
     roleLink: 'https://drive.google.com/file/d/1sJS7UolK1zHBNjfaQKpvyUlp66TDA0wX/view?usp=drive_link',
-    time: 'Jun – Aug 2025',
+    time: 'Jun - Aug 2025',
     bullets: [
-      'Built an Agentic AI powered course recommender using hybrid filtering and semantic search.',
-      'Developed multilingual semantic search and feature enhancements for the myscheme portal and mobile app.',
-      'Researched AI security threats, governance frameworks, and operational measures like API security and red teaming.',
+      'Developed multilingual semantic search and feature enhancements for 3600+ schemes on the myscheme portal and mobile app using FAISS and SentenceTransformers',
+      'Built an agentic AI-powered course recommender with FastAPI, integrating hybrid filtering with semantic search and multi-stage re-ranking. 7 course provider platforms covered.',
+      'Researched AI security threats, governance frameworks, and operational measures including API security and red teaming.',
     ],
   },
   {
@@ -71,7 +71,7 @@ export const EXPERIENCE = [
     org: 'Craving For Gaming',
     website: 'https://cravingforgaming.in/',
     roleLink: 'https://drive.google.com/file/d/1er16JaFSptBfZVLt3RQ25wsEwGU8uFsx/view?usp=drive_link',
-    time: 'Sep 2024 – Feb 2025',
+    time: 'Sep 2024 - Feb 2025',
     bullets: [
       'Optimized website performance and improved UX using HTML/CSS & on-page SEO techniques',
       'Reduced page load time, improved keyword ranking across 5+ product segments.',
@@ -81,17 +81,17 @@ export const EXPERIENCE = [
 ]
 
 export const PROJECTS = [
-  {
+    {
     type: 'Project',
-    title: 'Vision-Language Fusion for Image Captioning',
-    desc: 'A hybrid image captioning pipeline combining YOLOv5, Swin Transformer, and Mask R-CNN with enhanced WBF.',
+    title: 'Multi-Agent Research and News Automation Bot',
+    desc: 'An functional and automated multi-agent system for daily research and news digests',
     highlights: [],
     link: {
       label: 'GitHub',
-      href: 'https://github.com/Anhad-01/Vision-Language-Fusion-for-Advanced-Image-Captioning',
+      href: 'https://github.com/Anhad-01/AI-news-bot',
     },
     tags: [],
-    image: '/images/projects/vision.png',
+    image: '/images/projects/news.png',
   },
   {
     type: 'Project',
@@ -143,6 +143,18 @@ export const PROJECTS = [
   },
   {
     type: 'Project',
+    title: 'Vision-Language Fusion for Image Captioning',
+    desc: 'A hybrid image captioning pipeline combining YOLOv5, Swin Transformer, and Mask R-CNN with enhanced WBF.',
+    highlights: [],
+    link: {
+      label: 'GitHub',
+      href: 'https://github.com/Anhad-01/Vision-Language-Fusion-for-Advanced-Image-Captioning',
+    },
+    tags: [],
+    image: '/images/projects/vision.png',
+  }, 
+  {
+    type: 'Project',
     title: 'Chrome Extension for Spell and Grammar Checking',
     desc: 'A chrome extension for real-time spell and grammar correction.',
     highlights: [],
@@ -152,19 +164,19 @@ export const PROJECTS = [
     },
     tags: [],
     image: '/images/projects/chrome.svg',
-  },
-  {
-    type: 'Project',
-    title: 'Upwork Scraping Automation using n8n',
-    desc: 'An n8n automation worflow for scraping jobs, ranking them, and storing results in Airtable.',
-    highlights: [],
-    link: {
-      label: 'GitHub',
-      href: 'https://github.com/Anhad-01/Upwork-Scraping-Automation-using-n8n',
-    },
-    tags: [],
-    image: '/images/projects/upwork.png',
   }
+  // {
+  //   type: 'Project',
+  //   title: 'Upwork Scraping Automation using n8n',
+  //   desc: 'An n8n automation worflow for scraping jobs, ranking them, and storing results in Airtable.',
+  //   highlights: [],
+  //   link: {
+  //     label: 'GitHub',
+  //     href: 'https://github.com/Anhad-01/Upwork-Scraping-Automation-using-n8n',
+  //   },
+  //   tags: [],
+  //   image: '/images/projects/upwork.png',
+  // }
 ]
 
 export const ACHIEVEMENTS = [
@@ -218,7 +230,7 @@ export const BLOGPOSTS = [
   {
     title: 'Skills Got You the Interview. Now What?',
     excerpt: 'Your skills get you in the room. Your character gets you the job.',
-    date: '2026-05-04',
+    date: '2026-08-04',
     slug: 'skills-got-you-the-interview',
     image: '/images/blogs/interview.png',
     link: {
@@ -230,7 +242,7 @@ export const BLOGPOSTS = [
   {
     title: 'From Vibe Coder to Developer: How to Actually Use Coding Agents',
     excerpt: 'Because "just vibe with it" stops working the moment your app hits production.',
-    date: '2026-04-28',
+    date: '2026-06-28',
     slug: 'from-vibecoder-to-developer',
     image: '/images/blogs/vibecode.png',
     link: {
@@ -242,7 +254,7 @@ export const BLOGPOSTS = [
   {
     title: "What College Teaches You and What It Doesn't: The Gap Between College and Live Projects",
     excerpt: 'And how to start closing that gap before your first job',
-    date: '2026-04-02',
+    date: '2026-05-02',
     slug: 'what-college-teaches-you',
     image: '/images/blogs/college.png',
     link: {

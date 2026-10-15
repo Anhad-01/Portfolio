@@ -32,7 +32,7 @@ export function About() {
                 </a>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="rounded-full bg-neon-cyan/20 px-3 py-1 text-xs font-medium text-neon-cyan">
-                    CGPA: 9.64/10
+                    CGPA: 9.16/10
                   </span>
                   <span className="text-xs text-white/40">2022 - 2026</span>
                 </div>
@@ -53,15 +53,15 @@ export function About() {
                 <ul className="mt-3 space-y-2 text-sm text-white/70">
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-neon-cyan" />
+                    Winner of BioMed Bharat 2026 Hackathon
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-neon-cyan" />
+                    Top 20 in Hack The Future Hackathon by MoSPI
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-neon-cyan" />
                     Published research in Cryobiology (Elsevier, 2026)
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-neon-cyan" />
-                    Top 31 in TATA Technologies Hackathon (2,800+ teams)
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-neon-cyan" />
-                    Top 20 in Hack The Future (1,000+ teams)
                   </li>
                 </ul>
               </div>
@@ -79,7 +79,7 @@ export function About() {
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-white">Focus Areas</h3>
                 <p className="mt-3 text-sm text-white/60">
-                  Passionate about pushing the boundaries of artificial intelligence and creating
+                  Pushing the boundaries of artificial intelligence and creating
                   impactful solutions through cutting-edge technology.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
